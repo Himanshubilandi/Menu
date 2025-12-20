@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilandi's Cafe | QR Menu</title>
+    <meta name="description" content="Explore Bilandi's Cafe premium menu with our QR code menu. Fresh, vegetarian food made to order.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1 class="logo-text">Bilandi's Cafe</h1>
+                <p class="tagline">Fresh • Veg • Made to Order</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-title">Explore Our Menu</h2>
+            <p class="hero-subtitle">Scan the QR code to view our premium offerings</p>
+        </div>
+    </section>
+
+    <!-- Category Navigation -->
+    <section class="category-section">
+        <div class="container">
+            <h2 class="section-title">Our Menu Categories</h2>
+            <p class="section-subtitle">Tap a category to explore</p>
+            
+            <div class="categories-container">
+                <div class="categories-scroll">
+                    <div class="category active" data-category="pizza">
+                        <i class="fas fa-pizza-slice"></i>
+                        <span>Pizza</span>
+                    </div>
+                    <div class="category" data-category="burgers">
+                        <i class="fas fa-hamburger"></i>
+                        <span>Burgers</span>
+                    </div>
+                    <div class="category" data-category="sandwiches">
+                        <i class="fas fa-bread-slice"></i>
+                        <span>Sandwiches</span>
+                    </div>
+                    <div class="category" data-category="wraps">
+                        <i class="fas fa-burrito"></i>
+                        <span>Wraps</span>
+                    </div>
+                    <div class="category" data-category="pasta-noodles">
+                        <i class="fas fa-utensils"></i>
+                        <span>Pasta & Noodles</span>
+                    </div>
+                    <div class="category" data-category="starters-chilli">
+                        <i class="fas fa-pepper-hot"></i>
+                        <span>Starters & Chilli</span>
+                    </div>
+                    <div class="category" data-category="chaat">
+                        <i class="fas fa-bowl-food"></i>
+                        <span>Chaat</span>
+                    </div>
+                    <div class="category" data-category="beverages">
+                        <i class="fas fa-mug-hot"></i>
+                        <span>Beverages</span>
+                    </div>
+                    <div class="category" data-category="pastries">
+                        <i class="fas fa-cookie-bite"></i>
+                        <span>Pastries</span>
+                    </div>
+                    <div class="category" data-category="combos">
+                        <i class="fas fa-gift"></i>
+                        <span>Combos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Content -->
+    <main class="menu-container">
+        <div class="container">
+            <!-- Pizza Section -->
+            <section id="pizza" class="menu-section active">
+                <h2 class="menu-section-title">
+                    <i class="fas fa-pizza-slice"></i> Pizza
+                </h2>
+                <p class="menu-section-subtitle">Sizes: Regular | Medium | Large</p>
+                
+                <div class="menu-items">
+                    <!-- Pizza items will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Burgers Section -->
+            <section id="burgers" class="menu-section">
+                <h2 class="menu-section-title">
+                    <i class="fas fa-hamburger"></i> Burgers
+                </h2>
+                
+                <div class="menu-items">
+                    <!-- Burger items will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Sandwiches Section -->
+            <section id="sandwiches" class="menu-section">
+                <h2 class="menu-section-title">
+                    <i class="fas fa-bread-slice"></i> Sandwiches
+                </h2>
+                
+                <div class="menu-items">
+                    <!-- Sandwich items will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Wraps Section -->
+            <section id="wraps" class="menu-section">
+                <h2 class="menu-section-title">
+                    <i class="fas fa-burrito"></i> Wraps
+                </h2>
+                
+                <div class="menu-items">
+                    <!-- Wrap items will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Pasta & Noodles Section -->
+            <section id="pasta-noodles" class="menu-section">
+                <h2 class="menu-section-title">
+                    <i class="fas fa-utensils"></i> Pasta & Noodles
+                </h2>
+                
+                <div class="menu-items">
+                    <!-- Pasta & Noodles items will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Starters & Chilli Section -->
+            <section id="starters-chilli" class="menu-section">
+                <h2 class="menu-section-title">
+                    <i class="fas fa-pepper-hot"></i> Starters & Chilli
+                </h2>
+                
+                <div class="menu-items">
+                    <!-- Starters & Chilli items will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Chaat Section -->
+            <section id="chaat" class="menu-section">
+                <h2 class="menu-section-title">
+                    <i class="fas fa-bowl-food"></i> Chaat
+                </h2>
+                
+                <div class="menu-items">
+                    <!-- Chaat items will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Beverages Section -->
+            <section id="beverages" class="menu-section">
+                <h2 class="menu-section-title">
+                    <i class="fas fa-mug-hot"></i> Beverages
+                </h2>
+                
+                <div class="menu-items">
+                    <!-- Beverages items will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Pastries Section -->
+            <section id="pastries" class="menu-section">
+                <h2 class="menu-section-title">
+                    <i class="fas fa-cookie-bite"></i> Pastries
+                </h2>
+                
+                <div class="menu-items">
+                    <!-- Pastries items will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Combos Section -->
+            <section id="combos" class="menu-section">
+                <h2 class="menu-section-title">
+                    <i class="fas fa-gift"></i> Combos
+                </h2>
+                <p class="menu-section-subtitle">Bilandi's Specials</p>
+                
+                <div class="menu-items">
+                    <!-- Combo items will be populated by JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Recommendations Section -->
+    <section class="recommendations">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-star"></i> Bilandi's Recommendations
+            </h2>
+            <p class="section-subtitle">Our signature favorites</p>
+            
+            <div class="recommendations-grid">
+                <!-- Recommendations will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 class="logo-text">Bilandi's Cafe</h3>
+                    <p class="tagline">Fresh • Veg • Made to Order</p>
+                </div>
+                <p class="footer-text">© Bilandi's Cafe</p>
+                <p class="footer-text">Prices inclusive of taxes</p>
+                <p class="footer-text">Thank you for visiting!</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -17,16 +17,34 @@ function closeMobileNav() {
 }
 
 menuToggle.addEventListener("click", openMobileNav)
+menuToggle.addEventListener(
+  "touchstart",
+  () => {
+    openMobileNav()
+  },
+  { passive: true },
+)
+
 closeNav.addEventListener("click", closeMobileNav)
+closeNav.addEventListener("touchstart", closeMobileNav, { passive: true })
+
 mobileNavOverlay.addEventListener("click", closeMobileNav)
+mobileNavOverlay.addEventListener("touchstart", closeMobileNav, { passive: true })
 
 // Close mobile nav when clicking on a category link
 const navCategoryLinks = document.querySelectorAll(".nav-category")
 navCategoryLinks.forEach((link) => {
   link.addEventListener("click", closeMobileNav)
+  link.addEventListener(
+    "touchstart",
+    () => {
+      closeMobileNav()
+    },
+    { passive: true },
+  )
 })
 
-// Smooth scroll for category links
+// Smooth scroll for category links with improved mobile handling
 const categoryLinks = document.querySelectorAll(".category-link, .nav-category")
 categoryLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
@@ -35,7 +53,7 @@ categoryLinks.forEach((link) => {
     const targetSection = document.querySelector(targetId)
 
     if (targetSection) {
-      const headerOffset = 150
+      const headerOffset = window.innerWidth <= 480 ? 120 : 150
       const elementPosition = targetSection.getBoundingClientRect().top
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset
 
@@ -73,11 +91,10 @@ function highlightActiveCategory() {
 
 window.addEventListener("scroll", highlightActiveCategory)
 
-// Add active class style dynamically
 const style = document.createElement("style")
 style.textContent = `
     .category-link.active {
-        background-color: var(--primary);
+        background-color: #710013;
         color: white;
     }
 `

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilandi's Cafe - Menu</title>
+    <title>Bilandi's Cafe & Bakery - Royal Flavors</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
             <div class="header-content">
                 <div class="logo-section">
                     <h1 class="logo">BILANDI'S</h1>
-                    <p class="tagline">BAKERY | GROCERY | CAFE</p>
+                    <p class="tagline">CAFE | BAKERY | GROCERY</p>
                 </div>
                 <button class="menu-toggle" id="menuToggle">
                     <span></span>
@@ -33,34 +33,36 @@
                 <i class="fas fa-pizza-slice"></i>
                 <span>Pizza</span>
             </a>
+            <a href="#special-pizza" class="category-link">
+                <i class="fas fa-star"></i>
+                <span>Special</span>
+            </a>
             <a href="#burger" class="category-link">
                 <i class="fas fa-hamburger"></i>
-                <span>Burgers</span>
+                <span>Burger</span>
             </a>
             <a href="#sandwich" class="category-link">
                 <i class="fas fa-bread-slice"></i>
-                <span>Sandwiches</span>
+                <span>Sandwich</span>
             </a>
-            <a href="#patty" class="category-link">
-                <i class="fas fa-cookie"></i> 
-                <span>Patties</span>
-            </a>
-            <!-- Added wraps and fries to navigation -->
             <a href="#wraps" class="category-link">
-                <i class="fas fa-align-left"></i>
+                <i class="fas fa-scroll"></i>
+
                 <span>Wraps</span>
             </a>
+            <a href="#patty" class="category-link">
+                <i class="fas fa-circle"></i>
+
+                <span>Patty</span>
+            </a>
             <a href="#fries" class="category-link">
-                <i class="fas fa-square"></i> 
+                <i class="fas fa-fire"></i>
+
                 <span>Fries</span>
             </a>
             <a href="#pasta" class="category-link">
                 <i class="fas fa-bowl-food"></i>
                 <span>Pasta</span>
-            </a>
-            <a href="#chinese" class="category-link">
-                <i class="fas fa-utensils"></i>
-                <span>Chinese</span>
             </a>
             <a href="#garlicbread" class="category-link">
                 <i class="fas fa-bread-slice"></i>
@@ -70,21 +72,30 @@
                 <i class="fas fa-bowl-rice"></i>
                 <span>Maggi</span>
             </a>
-            <a href="#sweetcorn" class="category-link">
-                <i class="fas fa-seedling"></i>
-                <span>Sweet Corn</span>
+            <a href="#sub" class="category-link">
+                <i class="fas fa-hotdog"></i>
+
+                <span>Sub</span>
             </a>
-            <a href="#chaat" class="category-link">
-                <i class="fas fa-pepper-hot"></i>
-                <span>Chaat</span>
+            <a href="#chinese" class="category-link">
+                <i class="fas fa-utensils"></i>
+                <span>Chinese</span>
             </a>
-            <a href="#tea" class="category-link">
+            <a href="#salads" class="category-link">
+                <i class="fas fa-leaf"></i>
+                <span>Salads</span>
+            </a>
+            <a href="#coffee" class="category-link">
                 <i class="fas fa-mug-hot"></i>
-                <span>Tea & Coffee</span>
+                <span>Coffee</span>
             </a>
             <a href="#shakes" class="category-link">
                 <i class="fas fa-glass-whiskey"></i>
                 <span>Shakes</span>
+            </a>
+            <a href="#tea" class="category-link">
+                <i class="fas fa-leaf"></i>
+                <span>Tea</span>
             </a>
             <a href="#mocktails" class="category-link">
                 <i class="fas fa-cocktail"></i>
@@ -93,10 +104,6 @@
             <a href="#desserts" class="category-link">
                 <i class="fas fa-ice-cream"></i>
                 <span>Desserts</span>
-            </a>
-            <a href="#pastry" class="category-link">
-                <i class="fas fa-birthday-cake"></i>
-                <span>Pastries</span>
             </a>
         </div>
     </nav>
@@ -107,7 +114,7 @@
         <div class="mobile-nav-header">
             <div class="logo-section">
                 <h2>BILANDI'S</h2>
-                <p>BAKERY | GROCERY | CAFE</p>
+                <p>CAFE | BAKERY | GROCERY</p>
             </div>
             <button class="close-nav" id="closeNav">
                 <i class="fas fa-times"></i>
@@ -119,6 +126,10 @@
                     <i class="fas fa-pizza-slice"></i>
                     <span>Pizza</span>
                 </a>
+                <a href="#special-pizza" class="nav-category">
+                    <i class="fas fa-star"></i>
+                    <span>Special Pizza</span>
+                </a>
                 <a href="#burger" class="nav-category">
                     <i class="fas fa-hamburger"></i>
                     <span>Burgers</span>
@@ -127,26 +138,24 @@
                     <i class="fas fa-bread-slice"></i>
                     <span>Sandwiches</span>
                 </a>
-                <a href="#patty" class="nav-category">
-                    <i class="fas fa-drumstick-bite"></i>
-                    <span>Patties</span>
-                </a>
-                <!-- Added wraps and fries to mobile navigation -->
                 <a href="#wraps" class="nav-category">
-                    <i class="fas fa-burrito"></i>
+                    <i class="fas fa-scroll"></i>
+
                     <span>Wraps</span>
                 </a>
+                <a href="#patty" class="nav-category">
+                    <i class="fas fa-circle"></i>
+
+                    <span>Patties</span>
+                </a>
                 <a href="#fries" class="nav-category">
-                    <i class="fas fa-french-fries"></i>
+                    <i class="fas fa-fire"></i>
+
                     <span>Fries</span>
                 </a>
                 <a href="#pasta" class="nav-category">
                     <i class="fas fa-bowl-food"></i>
                     <span>Pasta</span>
-                </a>
-                <a href="#chinese" class="nav-category">
-                    <i class="fas fa-utensils"></i>
-                    <span>Chinese</span>
                 </a>
                 <a href="#garlicbread" class="nav-category">
                     <i class="fas fa-bread-slice"></i>
@@ -156,21 +165,30 @@
                     <i class="fas fa-bowl-rice"></i>
                     <span>Maggi</span>
                 </a>
-                <a href="#sweetcorn" class="nav-category">
-                    <i class="fas fa-seedling"></i>
-                    <span>Sweet Corn</span>
+                <a href="#sub" class="nav-category">
+                    <i class="fas fa-hotdog"></i>
+
+                    <span>Subs</span>
                 </a>
-                <a href="#chaat" class="nav-category">
-                    <i class="fas fa-pepper-hot"></i>
-                    <span>Chaat Corner</span>
+                <a href="#chinese" class="nav-category">
+                    <i class="fas fa-utensils"></i>
+                    <span>Chinese</span>
                 </a>
-                <a href="#tea" class="nav-category">
+                <a href="#salads" class="nav-category">
+                    <i class="fas fa-leaf"></i>
+                    <span>Salads</span>
+                </a>
+                <a href="#coffee" class="nav-category">
                     <i class="fas fa-mug-hot"></i>
-                    <span>Tea & Coffee</span>
+                    <span>Coffee</span>
                 </a>
                 <a href="#shakes" class="nav-category">
                     <i class="fas fa-glass-whiskey"></i>
                     <span>Shakes</span>
+                </a>
+                <a href="#tea" class="nav-category">
+                    <i class="fas fa-leaf"></i>
+                    <span>Tea</span>
                 </a>
                 <a href="#mocktails" class="nav-category">
                     <i class="fas fa-cocktail"></i>
@@ -180,14 +198,10 @@
                     <i class="fas fa-ice-cream"></i>
                     <span>Desserts</span>
                 </a>
-                <a href="#pastry" class="nav-category">
-                    <i class="fas fa-birthday-cake"></i>
-                    <span>Pastries</span>
-                </a>
             </div>
         </div>
         <div class="nav-footer">
-            <a href="tel:+911234567890" class="call-btn">
+            <a href="tel:+919828298009" class="call-btn">
                 <i class="fas fa-phone"></i> Call to Order
             </a>
         </div>
@@ -197,211 +211,153 @@
     <main class="main-content">
         <div class="container">
             <!-- Hero Section -->
-            <section class="hero-section">
-                <div class="hero-logo">
-                    <i class="fas fa-crown"></i>
-                </div>
-                <h2 class="hero-title">Our Menu</h2>
-                <p class="hero-subtitle">Explore our delicious selection</p>
-            </section>
+            <div class="hero-section">
+                 <h1 class="hero-title">BILANDI'S</h1>
+                <p class="hero-subtitle">Cafe | Bakery | Grocery</p>
 
-            <!-- PIZZA SECTION -->
+                </div>
+               
+            </div>
+
+            <div id="menu-container">
+                <!-- Menu sections follow -->
+            <!-- PIZZA SECTION - Keep images -->
             <section id="pizza" class="menu-section">
                 <div class="section-header">
                     <div class="section-title-wrapper">
                         <i class="fas fa-pizza-slice section-icon"></i>
                         <h2 class="section-title">Pizza</h2>
                     </div>
-                    <div class="section-pricing">
-                        <span class="price-badge">Small ₹80</span>
-                        <span class="price-badge">Medium ₹180</span>
-                        <span class="price-badge">Large ₹260</span>
-                    </div>
                 </div>
                 
                 <div class="menu-grid">
                     <div class="menu-item">
                         <div class="item-image">
-                            <img src="images/margherita-pizza.jpg" alt="Margherita Pizza">
+                            <img src="image1.png" alt="Margherita Pizza">
                         </div>
                         <h3 class="item-name">Margherita Pizza</h3>
-                        <p class="item-price">₹80 / ₹180 / ₹260</p>
+                        <p class="item-price">₹109 | ₹219 | ₹319</p>
                     </div>
-                    <div class="menu-item">
+                    
+                <div class="menu-item">
                         <div class="item-image">
-                            <img src="images/cheese-pizza.jpg" alt="Cheese Pizza">
+                            <img src="image22.png" alt="OCT Pizza">
                         </div>
-                        <h3 class="item-name">Cheese Pizza</h3>
-                        <p class="item-price">₹90 / ₹190 / ₹270</p>
+                        <h3 class="item-name">OCT Pizza</h3>
+                        <p class="item-price">₹149 | ₹239 | ₹349</p>
                     </div>
                     <div class="menu-item">
                         <div class="item-image">
-                            <img src="images/double-cheese-margherita.jpg" alt="Double Cheese Margherita">
-                        </div>
-                        <h3 class="item-name">Double Cheese Margherita</h3>
-                        <p class="item-price">₹110 / ₹210 / ₹290</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/onion-pizza.jpg" alt="Onion Pizza">
-                        </div>
-                        <h3 class="item-name">Onion Pizza</h3>
-                        <p class="item-price">₹85 / ₹185 / ₹265</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/capsicum-pizza.jpg" alt="Capsicum Pizza">
-                        </div>
-                        <h3 class="item-name">Capsicum Pizza</h3>
-                        <p class="item-price">₹95 / ₹195 / ₹275</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/onion-capsicum-pizza.jpg" alt="Onion & Capsicum Pizza">
-                        </div>
-                        <h3 class="item-name">Onion & Capsicum Pizza</h3>
-                        <p class="item-price">₹105 / ₹205 / ₹285</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/onion-corn-pizza.jpg" alt="Onion & Corn Pizza">
-                        </div>
-                        <h3 class="item-name">Onion & Corn Pizza</h3>
-                        <p class="item-price">₹100 / ₹200 / ₹280</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/mushroom-pizza.jpg" alt="Mushroom Pizza">
-                        </div>
-                        <h3 class="item-name">Mushroom Pizza</h3>
-                        <p class="item-price">₹120 / ₹220 / ₹300</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/corn-pizza.jpg" alt="Corn Pizza">
-                        </div>
-                        <h3 class="item-name">Corn Pizza</h3>
-                        <p class="item-price">₹90 / ₹190 / ₹270</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/farm-fresh-pizza.jpg" alt="Farm Fresh Pizza">
+                            <img src="image33.png" alt="Farm Fresh Pizza">
                         </div>
                         <h3 class="item-name">Farm Fresh Pizza</h3>
-                        <p class="item-price">₹130 / ₹230 / ₹310</p>
+                        <p class="item-price">₹159 | ₹249 | ₹359</p>
+                    </div>
+                     <div class="menu-item">
+                        <div class="item-image">
+                            <img src="image44.png" alt="Mexican Pizza">
+                        </div>
+                        <h3 class="item-name">Mexican Pizza</h3>
+                        <p class="item-price">₹169 | ₹259 | ₹369</p>
                     </div>
                     <div class="menu-item">
                         <div class="item-image">
-                            <img src="images/deluxe-veggie-pizza.jpg" alt="Deluxe Veggie Pizza">
+                            <img src="image66.png" alt="Deluxe Veggie Pizza">
                         </div>
                         <h3 class="item-name">Deluxe Veggie Pizza</h3>
-                        <p class="item-price">₹140 / ₹240 / ₹320</p>
+                        <p class="item-price">₹179 | ₹269 | ₹379</p>
                     </div>
                     <div class="menu-item">
                         <div class="item-image">
-                            <img src="images/veg-extravaganza.jpg" alt="Veg Extravaganza">
+                            <img src="image66.jpg" alt="Veg Extravaganza Pizza">
                         </div>
-                        <h3 class="item-name">Veg Extravaganza</h3>
-                        <p class="item-price">₹150 / ₹250 / ₹330</p>
+                        <h3 class="item-name">Veg Extravaganza Pizza</h3>
+                        <p class="item-price">₹189 | ₹279 | ₹389</p>
                     </div>
+                   
                     <div class="menu-item">
                         <div class="item-image">
-                            <img src="images/indi-makhni-paneer.jpg" alt="Indi Makhni Paneer">
+                            <img src="image77.png" alt="Cheese N Corn Pizza">
                         </div>
-                        <h3 class="item-name">Indi Makhni Paneer</h3>
-                        <p class="item-price">₹135 / ₹235 / ₹315</p>
+                        <h3 class="item-name">Cheese N Corn Pizza</h3>
+                        <p class="item-price">₹199 | ₹299 | ₹409</p>
                     </div>
                     <div class="menu-item">
                         <div class="item-image">
-                            <img src="images/indi-tandoori-paneer.jpg" alt="Indi Tandoori Paneer">
+                            <img src="image88.png" alt="Indi Makhni Paneer Pizza">
                         </div>
-                        <h3 class="item-name">Indi Tandoori Paneer</h3>
-                        <p class="item-price">₹135 / ₹235 / ₹315</p>
+                        <h3 class="item-name">Indi Makhni Paneer Pizza</h3>
+                        <p class="item-price">₹209 | ₹309 | ₹409</p>
                     </div>
                     <div class="menu-item">
                         <div class="item-image">
-                            <img src="images/paneer-onion-pizza.jpg" alt="Paneer & Onion Pizza">
-                        </div>
-                        <h3 class="item-name">Paneer & Onion Pizza</h3>
-                        <p class="item-price">₹115 / ₹215 / ₹295</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/paneer-capsicum.jpg" alt="Paneer & Capsicum">
-                        </div>
-                        <h3 class="item-name">Paneer & Capsicum</h3>
-                        <p class="item-price">₹125 / ₹225 / ₹305</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/kadai-paneer-pizza.jpg" alt="Kadai Paneer Pizza">
+                            <img src="image99.png" alt="Kadai Paneer Pizza">
                         </div>
                         <h3 class="item-name">Kadai Paneer Pizza</h3>
-                        <p class="item-price">₹140 / ₹240 / ₹320</p>
+                        <p class="item-price">₹209 | ₹309 | ₹409</p>
                     </div>
                     <div class="menu-item">
                         <div class="item-image">
-                            <img src="images/indian-makhni-paneer.jpg" alt="Indian Makhni Paneer">
+                            <img src="image100.jpg" alt="Peppy Paneer Pizza">
                         </div>
-                        <h3 class="item-name">Indian Makhni Paneer</h3>
-                        <p class="item-price">₹145 / ₹245 / ₹325</p>
+                        <h3 class="item-name">Peppy Paneer Pizza</h3>
+                        <p class="item-price">₹219 | ₹329 | ₹439</p>
                     </div>
                     <div class="menu-item">
                         <div class="item-image">
-                            <img src="images/flavor-bomb-pan-pizza.jpg" alt="Flavor Bomb Pan Pizza">
+                            <img src="image111.png" alt="Hot Tandoori Pizza">
                         </div>
-                        <h3 class="item-name">Flavor Bomb Pan Pizza</h3>
-                        <p class="item-price">₹160 / ₹260 / ₹340</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/volcano-pizza.jpg" alt="Volcano Pizza">
-                        </div>
-                        <h3 class="item-name">Volcano Pizza</h3>
-                        <p class="item-price">₹155 / ₹255 / ₹335</p>
+                        <h3 class="item-name">Hot Tandoori Pizza</h3>
+                        <p class="item-price">₹219 | ₹339 | ₹459</p>
                     </div>
                     <div class="menu-item special">
                         <div class="item-image">
-                            <img src="images/bilandis-special-pizza.jpg" alt="Bilandi's Special Pizza">
+                            <img src="image12.png" alt="Bilandi's Special Pizza">
                         </div>
-                        <h3 class="item-name">
-                            <span class="special-badge">★</span>
-                            Bilandi's Special Pizza
-                        </h3>
-                        <p class="item-price">₹180 / ₹280 / ₹360</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/cheese-peppy-paneer.jpg" alt="Cheese Peppy Paneer">
-                        </div>
-                        <h3 class="item-name">Cheese Peppy Paneer</h3>
-                        <p class="item-price">₹145 / ₹245 / ₹325</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/mexican-pizza.jpg" alt="Mexican Pizza">
-                        </div>
-                        <h3 class="item-name">Mexican Pizza</h3>
-                        <p class="item-price">₹150 / ₹250 / ₹330</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/4-in-1-pizza.jpg" alt="4 in 1 Pizza">
-                        </div>
-                        <h3 class="item-name">4 in 1 Pizza</h3>
-                        <p class="item-price">₹170 / ₹270 / ₹350</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/6-in-1-pizza.jpg" alt="6 in 1 Pizza">
-                        </div>
-                        <h3 class="item-name">6 in 1 Pizza</h3>
-                        <p class="item-price">₹190 / ₹290 / ₹370</p>
+                        <h3 class="item-name"><span class="special-badge">⭐</span>Bilandi's Special Pizza</h3>
+                        <p class="item-price">₹229 | ₹349 | ₹469</p>
                     </div>
                 </div>
             </section>
 
-            <!-- BURGER SECTION -->
+            <!-- SPECIAL PIZZAS SECTION - Remove images, keep only name and price -->
+            <section id="special-pizza" class="menu-section">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <i class="fas fa-star section-icon"></i>
+                        <h2 class="section-title">Special Pizzas</h2>
+                    </div>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item special">
+                        <h3 class="item-name">4 In 1 Pizza</h3>
+                        <p class="item-price">₹449</p>
+                    </div>
+                    <div class="menu-item special">
+                        <h3 class="item-name">Volcano Farm Fresh</h3>
+                        <p class="item-price">₹439</p>
+                    </div>
+                    <div class="menu-item special">
+                        <h3 class="item-name">Volcano Mexican</h3>
+                        <p class="item-price">₹449</p>
+                    </div>
+                    <div class="menu-item special">
+                        <h3 class="item-name">Volcano Cheese N Corn</h3>
+                        <p class="item-price">₹459</p>
+                    </div>
+                    <div class="menu-item special">
+                        <h3 class="item-name">Volcano Hot Tandoori</h3>
+                        <p class="item-price">₹469</p>
+                    </div>
+                    <div class="menu-item special">
+                        <h3 class="item-name">Volcano Peppy Paneer</h3>
+                        <p class="item-price">₹479</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BURGERS SECTION - Remove images -->
             <section id="burger" class="menu-section">
                 <div class="section-header">
                     <div class="section-title-wrapper">
@@ -412,68 +368,33 @@
                 
                 <div class="menu-grid">
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/aloo-tikki-burger.jpg" alt="Aloo Tikki Burger">
-                        </div>
                         <h3 class="item-name">Aloo Tikki Burger</h3>
-                        <p class="item-price">₹40</p>
+                        <p class="item-price">₹39</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/veg-burger.jpg" alt="Veg Burger">
-                        </div>
-                        <h3 class="item-name">Veg Burger</h3>
-                        <p class="item-price">₹50</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/cheese-burger.jpg" alt="Cheese Burger">
-                        </div>
                         <h3 class="item-name">Cheese Burger</h3>
-                        <p class="item-price">₹70</p>
+                        <p class="item-price">₹59</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/paneer-burger.jpg" alt="Paneer Burger">
-                        </div>
+                        <h3 class="item-name">Mexican Burger</h3>
+                        <p class="item-price">₹69</p>
+                    </div>
+                    <div class="menu-item">
                         <h3 class="item-name">Paneer Burger</h3>
-                        <p class="item-price">₹80</p>
+                        <p class="item-price">₹89</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/double-patty-burger.jpg" alt="Double Patty Burger">
-                        </div>
-                        <h3 class="item-name">Double Patty Burger</h3>
-                        <p class="item-price">₹90</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/jain-burger.jpg" alt="Jain Burger">
-                        </div>
-                        <h3 class="item-name">Jain Burger</h3>
-                        <p class="item-price">₹60</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/burger-sizzler.jpg" alt="Burger Sizzler">
-                        </div>
-                        <h3 class="item-name">Burger Sizzler</h3>
-                        <p class="item-price">₹120</p>
+                        <h3 class="item-name">Hot Tandoori Burger</h3>
+                        <p class="item-price">₹99</p>
                     </div>
                     <div class="menu-item special">
-                        <div class="item-image">
-                            <img src="images/bilandis-special-burger.jpg" alt="Bilandi's Special Burger">
-                        </div>
-                        <h3 class="item-name">
-                            <span class="special-badge">★</span>
-                            Bilandi's Special Burger
-                        </h3>
-                        <p class="item-price">₹150</p>
+                        <h3 class="item-name"><span class="special-badge">⭐</span>Bilandi's Special Burger</h3>
+                        <p class="item-price">₹109</p>
                     </div>
                 </div>
             </section>
 
-            <!-- SANDWICH SECTION -->
+            <!-- SANDWICHES SECTION - Remove images -->
             <section id="sandwich" class="menu-section">
                 <div class="section-header">
                     <div class="section-title-wrapper">
@@ -484,109 +405,49 @@
                 
                 <div class="menu-grid">
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/veg-grilled-sandwich.jpg" alt="Veg Grilled Sandwich">
-                        </div>
+                        <h3 class="item-name">Cold Sandwich</h3>
+                        <p class="item-price">₹59</p>
+                    </div>
+                    <div class="menu-item">
                         <h3 class="item-name">Veg Grilled Sandwich</h3>
-                        <p class="item-price">₹50</p>
+                        <p class="item-price">₹69</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/cheese-grilled-sandwich.jpg" alt="Cheese Grilled Sandwich">
-                        </div>
                         <h3 class="item-name">Cheese Grilled Sandwich</h3>
-                        <p class="item-price">₹70</p>
+                        <p class="item-price">₹89</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/paneer-sandwich.jpg" alt="Paneer Sandwich">
-                        </div>
                         <h3 class="item-name">Paneer Sandwich</h3>
-                        <p class="item-price">₹80</p>
+                        <p class="item-price">₹89</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/corn-cheese-sandwich.jpg" alt="Corn & Cheese Sandwich">
-                        </div>
-                        <h3 class="item-name">Corn & Cheese Sandwich</h3>
-                        <p class="item-price">₹75</p>
+                        <h3 class="item-name">Corn N Cheese Sandwich</h3>
+                        <p class="item-price">₹99</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/veg-club-sandwich.jpg" alt="Veg Club Sandwich">
-                        </div>
+                        <h3 class="item-name">Peri Peri Sandwich</h3>
+                        <p class="item-price">₹119</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Tandoori Sandwich</h3>
+                        <p class="item-price">₹119</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Makhni Sandwich</h3>
+                        <p class="item-price">₹119</p>
+                    </div>
+                    <div class="menu-item">
                         <h3 class="item-name">Veg Club Sandwich</h3>
-                        <p class="item-price">₹90</p>
+                        <p class="item-price">₹149</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/cheese-club-sandwich.jpg" alt="Cheese Club Sandwich">
-                        </div>
                         <h3 class="item-name">Cheese Club Sandwich</h3>
-                        <p class="item-price">₹110</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/jain-sandwich.jpg" alt="Jain Sandwich">
-                        </div>
-                        <h3 class="item-name">Jain Sandwich</h3>
-                        <p class="item-price">₹60</p>
-                    </div>
-                    <div class="menu-item special">
-                        <div class="item-image">
-                            <img src="images/bilandis-special-sandwich.jpg" alt="Bilandi's Special Sandwich">
-                        </div>
-                        <h3 class="item-name">
-                            <span class="special-badge">★</span>
-                            Bilandi's Special Sandwich
-                        </h3>
-                        <p class="item-price">₹130</p>
+                        <p class="item-price">₹169</p>
                     </div>
                 </div>
             </section>
 
-            <!-- PATTY SECTION -->
-            <section id="patty" class="menu-section">
-                <div class="section-header">
-                    <div class="section-title-wrapper">
-                        <i class="fas fa-drumstick-bite section-icon"></i>
-                        <h2 class="section-title">Patty Section</h2>
-                    </div>
-                </div>
-                
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/cheese-corn-patty.jpg" alt="Cheese Corn Patty">
-                        </div>
-                        <h3 class="item-name">Cheese Corn Patty</h3>
-                        <p class="item-price">₹45</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/pizza-patty.jpg" alt="Pizza Patty">
-                        </div>
-                        <h3 class="item-name">Pizza Patty</h3>
-                        <p class="item-price">₹50</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/double-cheese-patty.jpg" alt="Double Cheese Patty">
-                        </div>
-                        <h3 class="item-name">Double Cheese Patty</h3>
-                        <p class="item-price">₹60</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/peri-peri-patty.jpg" alt="Peri Peri Patty">
-                        </div>
-                        <h3 class="item-name">Peri Peri Patty</h3>
-                        <p class="item-price">₹55</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- WRAPS SECTION -->
+            <!-- WRAPS SECTION - Remove images -->
             <section id="wraps" class="menu-section">
                 <div class="section-header">
                     <div class="section-title-wrapper">
@@ -597,54 +458,50 @@
                 
                 <div class="menu-grid">
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/veg-wrap.jpg" alt="Veg Wrap">
-                        </div>
-                        <h3 class="item-name">Veg Wrap</h3>
-                        <p class="item-price">₹80</p>
+                        <h3 class="item-name">Aloo Tikki Wrap</h3>
+                        <p class="item-price">₹69</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/paneer-wrap.jpg" alt="Paneer Wrap">
-                        </div>
                         <h3 class="item-name">Paneer Wrap</h3>
-                        <p class="item-price">₹100</p>
+                        <p class="item-price">₹99</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/tandoori-wrap.jpg" alt="Tandoori Wrap">
-                        </div>
-                        <h3 class="item-name">Tandoori Wrap</h3>
-                        <p class="item-price">₹110</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/cheese-wrap.jpg" alt="Cheese Wrap">
-                        </div>
-                        <h3 class="item-name">Cheese Wrap</h3>
-                        <p class="item-price">₹90</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/schezwan-wrap.jpg" alt="Schezwan Wrap">
-                        </div>
-                        <h3 class="item-name">Schezwan Wrap</h3>
-                        <p class="item-price">₹95</p>
-                    </div>
-                    <div class="menu-item special">
-                        <div class="item-image">
-                            <img src="images/bilandis-special-wrap.jpg" alt="Bilandi's Special Wrap">
-                        </div>
-                        <h3 class="item-name">
-                            <span class="special-badge">★</span>
-                            Bilandi's Special Wrap
-                        </h3>
-                        <p class="item-price">₹130</p>
+                        <h3 class="item-name">Cheese N Corn Wrap</h3>
+                        <p class="item-price">₹119</p>
                     </div>
                 </div>
             </section>
 
-            <!-- FRIES SECTION -->
+            <!-- PATTY SECTION - Remove images -->
+            <section id="patty" class="menu-section">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <i class="fas fa-drumstick-bite section-icon"></i>
+                        <h2 class="section-title">Patties</h2>
+                    </div>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <h3 class="item-name">Cheese N Corn Patty</h3>
+                        <p class="item-price">₹39</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Tandoori Patty</h3>
+                        <p class="item-price">₹39</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Mexican Patty</h3>
+                        <p class="item-price">₹49</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Pizza Patty</h3>
+                        <p class="item-price">₹59</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FRIES SECTION - Remove images -->
             <section id="fries" class="menu-section">
                 <div class="section-header">
                     <div class="section-title-wrapper">
@@ -655,54 +512,29 @@
                 
                 <div class="menu-grid">
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/plain-fries.jpg" alt="Plain Fries">
-                        </div>
                         <h3 class="item-name">Plain Fries</h3>
-                        <p class="item-price">₹50</p>
+                        <p class="item-price">₹79</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/peri-peri-fries.jpg" alt="Peri Peri Fries">
-                        </div>
-                        <h3 class="item-name">Peri Peri Fries</h3>
-                        <p class="item-price">₹70</p>
+                        <h3 class="item-name">Cheese Loaded Fries</h3>
+                        <p class="item-price">₹79</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/cheese-fries.jpg" alt="Cheese Fries">
-                        </div>
-                        <h3 class="item-name">Cheese Fries</h3>
-                        <p class="item-price">₹90</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/loaded-fries.jpg" alt="Loaded Fries">
-                        </div>
-                        <h3 class="item-name">Loaded Fries</h3>
-                        <p class="item-price">₹110</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/masala-fries.jpg" alt="Masala Fries">
-                        </div>
                         <h3 class="item-name">Masala Fries</h3>
-                        <p class="item-price">₹65</p>
+                        <p class="item-price">₹89</p>
                     </div>
-                    <div class="menu-item special">
-                        <div class="item-image">
-                            <img src="images/bilandis-special-fries.jpg" alt="Bilandi's Special Fries">
-                        </div>
-                        <h3 class="item-name">
-                            <span class="special-badge">★</span>
-                            Bilandi's Special Fries
-                        </h3>
-                        <p class="item-price">₹120</p>
+                    <div class="menu-item">
+                        <h3 class="item-name">Tandoori Fries</h3>
+                        <p class="item-price">₹99</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Peri Peri Fries</h3>
+                        <p class="item-price">₹99</p>
                     </div>
                 </div>
             </section>
 
-            <!-- PASTA SECTION -->
+            <!-- PASTA SECTION - Remove images -->
             <section id="pasta" class="menu-section">
                 <div class="section-header">
                     <div class="section-title-wrapper">
@@ -713,142 +545,33 @@
                 
                 <div class="menu-grid">
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/red-sauce-pasta.jpg" alt="Red Sauce Pasta">
-                        </div>
                         <h3 class="item-name">Red Sauce Pasta</h3>
-                        <p class="item-price">₹90</p>
+                        <p class="item-price">₹139</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/white-sauce-pasta.jpg" alt="White Sauce Pasta">
-                        </div>
                         <h3 class="item-name">White Sauce Pasta</h3>
-                        <p class="item-price">₹100</p>
+                        <p class="item-price">₹149</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/mix-sauce-pasta.jpg" alt="Mix Sauce Pasta">
-                        </div>
-                        <h3 class="item-name">Mix Sauce Pasta</h3>
-                        <p class="item-price">₹110</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/makhni-pasta.jpg" alt="Makhni Pasta">
-                        </div>
                         <h3 class="item-name">Makhni Pasta</h3>
-                        <p class="item-price">₹120</p>
+                        <p class="item-price">₹149</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/tandoori-pasta.jpg" alt="Tandoori Pasta">
-                        </div>
                         <h3 class="item-name">Tandoori Pasta</h3>
-                        <p class="item-price">₹120</p>
+                        <p class="item-price">₹149</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Peri Peri Pasta</h3>
+                        <p class="item-price">₹149</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Mix Sauce Pasta</h3>
+                        <p class="item-price">₹159</p>
                     </div>
                 </div>
             </section>
 
-            <!-- CHINESE SECTION -->
-            <section id="chinese" class="menu-section">
-                <div class="section-header">
-                    <div class="section-title-wrapper">
-                        <i class="fas fa-utensils section-icon"></i>
-                        <h2 class="section-title">Chinese</h2>
-                    </div>
-                </div>
-                
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/veg-noodles.jpg" alt="Veg Noodles">
-                        </div>
-                        <h3 class="item-name">Veg Noodles</h3>
-                        <p class="item-price">₹80</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/hakka-noodles.jpg" alt="Hakka Noodles">
-                        </div>
-                        <h3 class="item-name">Hakka Noodles</h3>
-                        <p class="item-price">₹90</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/mushroom-noodles.jpg" alt="Mushroom Noodles">
-                        </div>
-                        <h3 class="item-name">Mushroom Noodles</h3>
-                        <p class="item-price">₹110</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/paneer-noodles.jpg" alt="Paneer Noodles">
-                        </div>
-                        <h3 class="item-name">Paneer Noodles</h3>
-                        <p class="item-price">₹120</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/veg-fried-rice.jpg" alt="Veg Fried Rice">
-                        </div>
-                        <h3 class="item-name">Veg Fried Rice</h3>
-                        <p class="item-price">₹85</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/schezwan-fried-rice.jpg" alt="Schezwan Fried Rice">
-                        </div>
-                        <h3 class="item-name">Schezwan Fried Rice</h3>
-                        <p class="item-price">₹95</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/mushroom-fried-rice.jpg" alt="Mushroom Fried Rice">
-                        </div>
-                        <h3 class="item-name">Mushroom Fried Rice</h3>
-                        <p class="item-price">₹115</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/paneer-fried-rice.jpg" alt="Paneer Fried Rice">
-                        </div>
-                        <h3 class="item-name">Paneer Fried Rice</h3>
-                        <p class="item-price">₹125</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/singaporean-noodles.jpg" alt="Singaporean Noodles">
-                        </div>
-                        <h3 class="item-name">Singaporean Noodles</h3>
-                        <p class="item-price">₹110</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/manchurian-dry.jpg" alt="Manchurian Dry">
-                        </div>
-                        <h3 class="item-name">Manchurian Dry</h3>
-                        <p class="item-price">₹100</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/manchurian-gravy.jpg" alt="Manchurian Gravy">
-                        </div>
-                        <h3 class="item-name">Manchurian Gravy</h3>
-                        <p class="item-price">₹110</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/chilli-paneer.jpg" alt="Chilli Paneer">
-                        </div>
-                        <h3 class="item-name">Chilli Paneer</h3>
-                        <p class="item-price">₹130</p>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- GARLIC BREAD SECTION -->
+            <!-- GARLIC BREAD SECTION - Remove images -->
             <section id="garlicbread" class="menu-section">
                 <div class="section-header">
                     <div class="section-title-wrapper">
@@ -859,30 +582,21 @@
                 
                 <div class="menu-grid">
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/plain-garlic-bread.jpg" alt="Plain Garlic Bread">
-                        </div>
-                        <h3 class="item-name">Plain Garlic Bread</h3>
-                        <p class="item-price">₹60</p>
+                        <h3 class="item-name">Toast Garlic Bread</h3>
+                        <p class="item-price">₹79</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/cheese-garlic-bread.jpg" alt="Cheese Garlic Bread">
-                        </div>
-                        <h3 class="item-name">Cheese Garlic Bread</h3>
-                        <p class="item-price">₹80</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/stuffed-garlic-bread.jpg" alt="Stuffed Garlic Bread">
-                        </div>
                         <h3 class="item-name">Stuffed Garlic Bread</h3>
-                        <p class="item-price">₹100</p>
+                        <p class="item-price">₹139</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Makhni Cheese Garlic Bread</h3>
+                        <p class="item-price">₹139</p>
                     </div>
                 </div>
             </section>
 
-            <!-- MAGGI SECTION -->
+            <!-- MAGGI SECTION - Remove images -->
             <section id="maggi" class="menu-section">
                 <div class="section-header">
                     <div class="section-title-wrapper">
@@ -893,346 +607,296 @@
                 
                 <div class="menu-grid">
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/plain-maggi.jpg" alt="Plain Maggi">
-                        </div>
-                        <h3 class="item-name">Plain Maggi</h3>
-                        <p class="item-price">₹30</p>
+                        <h3 class="item-name">Veg Maggie</h3>
+                        <p class="item-price">₹69</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/veg-maggi.jpg" alt="Veg Maggi">
-                        </div>
-                        <h3 class="item-name">Veg Maggi</h3>
-                        <p class="item-price">₹40</p>
+                        <h3 class="item-name">Tandoori Maggie</h3>
+                        <p class="item-price">₹89</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/cheese-maggi.jpg" alt="Cheese Maggi">
-                        </div>
-                        <h3 class="item-name">Cheese Maggi</h3>
-                        <p class="item-price">₹60</p>
+                        <h3 class="item-name">Peri Peri Maggie</h3>
+                        <p class="item-price">₹89</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/paneer-maggi.jpg" alt="Paneer Maggi">
-                        </div>
-                        <h3 class="item-name">Paneer Maggi</h3>
-                        <p class="item-price">₹70</p>
+                        <h3 class="item-name">Makhni Maggie</h3>
+                        <p class="item-price">₹89</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Cheese Maggie</h3>
+                        <p class="item-price">₹109</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Cheese N Corn Maggie</h3>
+                        <p class="item-price">₹109</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SUBS SECTION - Remove images -->
+            <section id="sub" class="menu-section">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <i class="fas fa-hoagie section-icon"></i>
+                        <h2 class="section-title">Subs</h2>
+                    </div>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <h3 class="item-name">Aloo Patty Sub</h3>
+                        <p class="item-price">₹89</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Veggie Delight Sub</h3>
+                        <p class="item-price">₹89</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Paneer Tikka Sub</h3>
+                        <p class="item-price">₹109</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Cheese N Corn Sub</h3>
+                        <p class="item-price">₹129</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHINESE SECTION - Remove images -->
+            <section id="chinese" class="menu-section">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <i class="fas fa-utensils section-icon"></i>
+                        <h2 class="section-title">Chinese</h2>
+                    </div>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <h3 class="item-name">Spring Roll</h3>
+                        <p class="item-price">₹69</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Cheese Cigar Roll</h3>
+                        <p class="item-price">₹89</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Cheese Balls</h3>
+                        <p class="item-price">₹129</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Honey Chilli Potato</h3>
+                        <p class="item-price">₹129</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Paneer Chilli</h3>
+                        <p class="item-price">₹139</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SALADS SECTION - Remove images -->
+            <section id="salads" class="menu-section">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <i class="fas fa-leaf section-icon"></i>
+                        <h2 class="section-title">Salads</h2>
+                    </div>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <h3 class="item-name">Paneer Salad</h3>
+                        <p class="item-price">₹119</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Corn Paneer Salad</h3>
+                        <p class="item-price">₹129</p>
                     </div>
                     <div class="menu-item special">
-                        <div class="item-image">
-                            <img src="images/bilandis-special-maggi.jpg" alt="Bilandi's Special Maggi">
-                        </div>
-                        <h3 class="item-name">
-                            <span class="special-badge">★</span>
-                            Bilandi's Special Maggi
-                        </h3>
-                        <p class="item-price">₹90</p>
+                        <h3 class="item-name"><span class="special-badge">⭐</span>Bilandi's Special Salad</h3>
+                        <p class="item-price">₹149</p>
                     </div>
                 </div>
             </section>
 
-            <!-- SWEET CORN SECTION -->
-            <section id="sweetcorn" class="menu-section">
-                <div class="section-header">
-                    <div class="section-title-wrapper">
-                        <i class="fas fa-seedling section-icon"></i>
-                        <h2 class="section-title">Sweet Corn</h2>
-                    </div>
-                </div>
-                
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/plain-sweet-corn.jpg" alt="Plain Sweet Corn">
-                        </div>
-                        <h3 class="item-name">Plain Sweet Corn</h3>
-                        <p class="item-price">₹40</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/butter-sweet-corn.jpg" alt="Butter Sweet Corn">
-                        </div>
-                        <h3 class="item-name">Butter Sweet Corn</h3>
-                        <p class="item-price">₹50</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/masala-sweet-corn.jpg" alt="Masala Sweet Corn">
-                        </div>
-                        <h3 class="item-name">Masala Sweet Corn</h3>
-                        <p class="item-price">₹60</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CHAAT SECTION -->
-            <section id="chaat" class="menu-section">
-                <div class="section-header">
-                    <div class="section-title-wrapper">
-                        <i class="fas fa-pepper-hot section-icon"></i>
-                        <h2 class="section-title">Chaat Corner</h2>
-                    </div>
-                </div>
-                
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/aloo-chaat.jpg" alt="Aloo Chaat">
-                        </div>
-                        <h3 class="item-name">Aloo Chaat</h3>
-                        <p class="item-price">₹50</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/papdi-chaat.jpg" alt="Papdi Chaat">
-                        </div>
-                        <h3 class="item-name">Papdi Chaat</h3>
-                        <p class="item-price">₹60</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/dahi-bhalla.jpg" alt="Dahi Bhalla">
-                        </div>
-                        <h3 class="item-name">Dahi Bhalla</h3>
-                        <p class="item-price">₹70</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/pani-puri.jpg" alt="Pani Puri">
-                        </div>
-                        <h3 class="item-name">Pani Puri</h3>
-                        <p class="item-price">₹40</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/bhel-puri.jpg" alt="Bhel Puri">
-                        </div>
-                        <h3 class="item-name">Bhel Puri</h3>
-                        <p class="item-price">₹50</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/samosa-chaat.jpg" alt="Samosa Chaat">
-                        </div>
-                        <h3 class="item-name">Samosa Chaat</h3>
-                        <p class="item-price">₹60</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- TEA & COFFEE SECTION -->
-            <section id="tea" class="menu-section">
+            <!-- COFFEE SECTION - Remove images -->
+            <section id="coffee" class="menu-section">
                 <div class="section-header">
                     <div class="section-title-wrapper">
                         <i class="fas fa-mug-hot section-icon"></i>
-                        <h2 class="section-title">Tea & Coffee</h2>
+                        <h2 class="section-title">Coffee</h2>
                     </div>
                 </div>
                 
                 <div class="menu-grid">
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/masala-tea.jpg" alt="Masala Tea">
-                        </div>
-                        <h3 class="item-name">Masala Tea</h3>
-                        <p class="item-price">₹15</p>
+                        <h3 class="item-name">Hot Coffee</h3>
+                        <p class="item-price">₹49</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/ginger-tea.jpg" alt="Ginger Tea">
-                        </div>
-                        <h3 class="item-name">Ginger Tea</h3>
-                        <p class="item-price">₹15</p>
+                        <h3 class="item-name">Hazelnut Hot Coffee</h3>
+                        <p class="item-price">₹89</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/elaichi-tea.jpg" alt="Elaichi Tea">
-                        </div>
-                        <h3 class="item-name">Elaichi Tea</h3>
-                        <p class="item-price">₹20</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/green-tea.jpg" alt="Green Tea">
-                        </div>
-                        <h3 class="item-name">Green Tea</h3>
-                        <p class="item-price">₹25</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/black-coffee.jpg" alt="Black Coffee">
-                        </div>
-                        <h3 class="item-name">Black Coffee</h3>
-                        <p class="item-price">₹30</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/cappuccino.jpg" alt="Cappuccino">
-                        </div>
-                        <h3 class="item-name">Cappuccino</h3>
-                        <p class="item-price">₹50</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/cafe-latte.jpg" alt="Cafe Latte">
-                        </div>
-                        <h3 class="item-name">Cafe Latte</h3>
-                        <p class="item-price">₹60</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/cold-coffee.jpg" alt="Cold Coffee">
-                        </div>
                         <h3 class="item-name">Cold Coffee</h3>
-                        <p class="item-price">₹70</p>
+                        <p class="item-price">₹69</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/hot-chocolate.jpg" alt="Hot Chocolate">
-                        </div>
-                        <h3 class="item-name">Hot Chocolate</h3>
-                        <p class="item-price">₹80</p>
+                        <h3 class="item-name">Cold Coffee with Ice Cream</h3>
+                        <p class="item-price">₹89</p>
                     </div>
                 </div>
             </section>
 
-            <!-- SHAKES SECTION -->
+            <!-- SHAKES SECTION - Remove images -->
             <section id="shakes" class="menu-section">
                 <div class="section-header">
                     <div class="section-title-wrapper">
                         <i class="fas fa-glass-whiskey section-icon"></i>
-                        <h2 class="section-title">Shakes & Smoothies</h2>
+                        <h2 class="section-title">Shakes</h2>
                     </div>
                 </div>
                 
                 <div class="menu-grid">
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/chocolate-shake.jpg" alt="Chocolate Shake">
-                        </div>
-                        <h3 class="item-name">Chocolate Shake</h3>
-                        <p class="item-price">₹80</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/vanilla-shake.jpg" alt="Vanilla Shake">
-                        </div>
                         <h3 class="item-name">Vanilla Shake</h3>
-                        <p class="item-price">₹70</p>
+                        <p class="item-price">₹59</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/strawberry-shake.jpg" alt="Strawberry Shake">
-                        </div>
+                        <h3 class="item-name">Vanilla Shake with Ice Cream</h3>
+                        <p class="item-price">₹79</p>
+                    </div>
+                    <div class="menu-item">
                         <h3 class="item-name">Strawberry Shake</h3>
-                        <p class="item-price">₹90</p>
+                        <p class="item-price">₹69</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/mango-shake.jpg" alt="Mango Shake">
-                        </div>
+                        <h3 class="item-name">Strawberry Shake with Ice Cream</h3>
+                        <p class="item-price">₹89</p>
+                    </div>
+                    <div class="menu-item">
                         <h3 class="item-name">Mango Shake</h3>
-                        <p class="item-price">₹95</p>
+                        <p class="item-price">₹69</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/banana-shake.jpg" alt="Banana Shake">
-                        </div>
-                        <h3 class="item-name">Banana Shake</h3>
-                        <p class="item-price">₹75</p>
+                        <h3 class="item-name">Mango Shake with Ice Cream</h3>
+                        <p class="item-price">₹89</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/oreo-shake.jpg" alt="Oreo Shake">
-                        </div>
+                        <h3 class="item-name">Butterscotch Shake</h3>
+                        <p class="item-price">₹69</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Butterscotch Shake with Ice Cream</h3>
+                        <p class="item-price">₹89</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Chocolate Shake</h3>
+                        <p class="item-price">₹79</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Chocolate Shake with Ice Cream</h3>
+                        <p class="item-price">₹99</p>
+                    </div>
+                    <div class="menu-item">
                         <h3 class="item-name">Oreo Shake</h3>
-                        <p class="item-price">₹110</p>
+                        <p class="item-price">₹119</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/kitkat-shake.jpg" alt="KitKat Shake">
-                        </div>
+                        <h3 class="item-name">Blue Berry Shake</h3>
+                        <p class="item-price">₹119</p>
+                    </div>
+                    <div class="menu-item">
                         <h3 class="item-name">KitKat Shake</h3>
-                        <p class="item-price">₹120</p>
+                        <p class="item-price">₹129</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/nutella-shake.jpg" alt="Nutella Shake">
-                        </div>
+                        <h3 class="item-name">Red Velvet Shake</h3>
+                        <p class="item-price">₹139</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Brownie Shake</h3>
+                        <p class="item-price">₹149</p>
+                    </div>
+                    <div class="menu-item">
                         <h3 class="item-name">Nutella Shake</h3>
-                        <p class="item-price">₹130</p>
+                        <p class="item-price">₹149</p>
                     </div>
                     <div class="menu-item special">
-                        <div class="item-image">
-                            <img src="images/bilandis-special-shake.jpg" alt="Bilandi's Special Shake">
-                        </div>
-                        <h3 class="item-name">
-                            <span class="special-badge">★</span>
-                            Bilandi's Special Shake
-                        </h3>
-                        <p class="item-price">₹150</p>
+                        <h3 class="item-name"><span class="special-badge">⭐</span>Biscoff Shake</h3>
+                        <p class="item-price">₹159</p>
                     </div>
                 </div>
             </section>
 
-            <!-- MOCKTAILS SECTION -->
+            <!-- TEA SECTION - Remove images -->
+            <section id="tea" class="menu-section">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <i class="fas fa-leaf section-icon"></i>
+                        <h2 class="section-title">Tea</h2>
+                    </div>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <h3 class="item-name">Masala Tea</h3>
+                        <p class="item-price">₹19</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Elaichi Tea</h3>
+                        <p class="item-price">₹25</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Rose Tea</h3>
+                        <p class="item-price">₹29</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MOCKTAILS SECTION - Remove images -->
             <section id="mocktails" class="menu-section">
                 <div class="section-header">
                     <div class="section-title-wrapper">
                         <i class="fas fa-cocktail section-icon"></i>
-                        <h2 class="section-title">Mocktails</h2>
+                        <h2 class="section-title">Mocktails & Drinks</h2>
                     </div>
                 </div>
                 
                 <div class="menu-grid">
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/virgin-mojito.jpg" alt="Virgin Mojito">
-                        </div>
-                        <h3 class="item-name">Virgin Mojito</h3>
-                        <p class="item-price">₹80</p>
+                        <h3 class="item-name">Jeera Mojito</h3>
+                        <p class="item-price">₹79</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/blue-lagoon.jpg" alt="Blue Lagoon">
-                        </div>
-                        <h3 class="item-name">Blue Lagoon</h3>
-                        <p class="item-price">₹90</p>
+                        <h3 class="item-name">Mint Mojito</h3>
+                        <p class="item-price">₹79</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/pink-paradise.jpg" alt="Pink Paradise">
-                        </div>
-                        <h3 class="item-name">Pink Paradise</h3>
-                        <p class="item-price">₹100</p>
+                        <h3 class="item-name">Water Melon</h3>
+                        <p class="item-price">₹89</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/watermelon-cooler.jpg" alt="Watermelon Cooler">
-                        </div>
-                        <h3 class="item-name">Watermelon Cooler</h3>
-                        <p class="item-price">₹85</p>
+                        <h3 class="item-name">Blue Curacao</h3>
+                        <p class="item-price">₹99</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/lemon-mint-cooler.jpg" alt="Lemon Mint Cooler">
-                        </div>
-                        <h3 class="item-name">Lemon Mint Cooler</h3>
-                        <p class="item-price">₹70</p>
+                        <h3 class="item-name">Black Current</h3>
+                        <p class="item-price">₹109</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/tropical-twist.jpg" alt="Tropical Twist">
-                        </div>
-                        <h3 class="item-name">Tropical Twist</h3>
-                        <p class="item-price">₹110</p>
+                        <h3 class="item-name">Cold Drinks</h3>
+                        <p class="item-price">MRP</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Water Bottle</h3>
+                        <p class="item-price">MRP</p>
                     </div>
                 </div>
             </section>
 
-            <!-- DESSERTS SECTION -->
+            <!-- DESSERTS SECTION - Remove images -->
             <section id="desserts" class="menu-section">
                 <div class="section-header">
                     <div class="section-title-wrapper">
@@ -1243,115 +907,16 @@
                 
                 <div class="menu-grid">
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/brownie-with-icecream.jpg" alt="Brownie with Ice Cream">
-                        </div>
+                        <h3 class="item-name">Brownie</h3>
+                        <p class="item-price">₹119</p>
+                    </div>
+                    <div class="menu-item">
                         <h3 class="item-name">Brownie with Ice Cream</h3>
-                        <p class="item-price">₹120</p>
+                        <p class="item-price">₹159</p>
                     </div>
                     <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/chocolate-lava-cake.jpg" alt="Chocolate Lava Cake">
-                        </div>
-                        <h3 class="item-name">Chocolate Lava Cake</h3>
-                        <p class="item-price">₹100</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/ice-cream-sundae.jpg" alt="Ice Cream Sundae">
-                        </div>
-                        <h3 class="item-name">Ice Cream Sundae</h3>
-                        <p class="item-price">₹90</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/tiramisu.jpg" alt="Tiramisu">
-                        </div>
-                        <h3 class="item-name">Tiramisu</h3>
-                        <p class="item-price">₹140</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/cheesecake.jpg" alt="Cheesecake">
-                        </div>
-                        <h3 class="item-name">Cheesecake</h3>
-                        <p class="item-price">₹130</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/gulab-jamun.jpg" alt="Gulab Jamun">
-                        </div>
-                        <h3 class="item-name">Gulab Jamun</h3>
-                        <p class="item-price">₹60</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- PASTRIES SECTION -->
-            <section id="pastry" class="menu-section">
-                <div class="section-header">
-                    <div class="section-title-wrapper">
-                        <i class="fas fa-birthday-cake section-icon"></i>
-                        <h2 class="section-title">Pastries & Cakes</h2>
-                    </div>
-                </div>
-                
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/black-forest-pastry.jpg" alt="Black Forest Pastry">
-                        </div>
-                        <h3 class="item-name">Black Forest Pastry</h3>
-                        <p class="item-price">₹50</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/chocolate-truffle-pastry.jpg" alt="Chocolate Truffle Pastry">
-                        </div>
-                        <h3 class="item-name">Chocolate Truffle Pastry</h3>
-                        <p class="item-price">₹60</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/red-velvet-pastry.jpg" alt="Red Velvet Pastry">
-                        </div>
-                        <h3 class="item-name">Red Velvet Pastry</h3>
-                        <p class="item-price">₹70</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/pineapple-pastry.jpg" alt="Pineapple Pastry">
-                        </div>
-                        <h3 class="item-name">Pineapple Pastry</h3>
-                        <p class="item-price">₹45</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/white-forest-pastry.jpg" alt="White Forest Pastry">
-                        </div>
-                        <h3 class="item-name">White Forest Pastry</h3>
-                        <p class="item-price">₹55</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/butterscotch-pastry.jpg" alt="Butterscotch Pastry">
-                        </div>
-                        <h3 class="item-name">Butterscotch Pastry</h3>
-                        <p class="item-price">₹55</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/choco-vanilla-pastry.jpg" alt="Choco Vanilla Pastry">
-                        </div>
-                        <h3 class="item-name">Choco Vanilla Pastry</h3>
-                        <p class="item-price">₹50</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-image">
-                            <img src="images/strawberry-pastry.jpg" alt="Strawberry Pastry">
-                        </div>
-                        <h3 class="item-name">Strawberry Pastry</h3>
-                        <p class="item-price">₹65</p>
+                        <h3 class="item-name">Chocolate Sandwich</h3>
+                        <p class="item-price">₹179</p>
                     </div>
                 </div>
             </section>
@@ -1364,15 +929,16 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <h3>BILANDI'S</h3>
-                    <p>BAKERY | GROCERY | CAFE</p>
+                    <p>CAFE | BAKERY | GROCERY</p>
+                    <p> <i class="fas fa-location-dot"></i><a href="https://maps.app.goo.gl/hwpvn9WWwudpZwKK8"target="_blank">Location</a></p>
                 </div>
-                <a href="tel:+911234567890" class="contact-btn">
-                    <i class="fas fa-phone"></i>
-                    Call to Order
+                <a href="tel:+919828298009" class="contact-btn">
+                    <i class="fas fa-phone"></i> Call to Order
                 </a>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Bilandi's Cafe. All rights reserved.</p>
+        
+                <p>&copy; 2026 Bilandi's Cafe & Bakery. All rights reserved.</p>
             </div>
         </div>
     </footer>

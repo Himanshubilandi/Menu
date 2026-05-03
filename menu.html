@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Menu — Bilandi's Cafe | Bakery | Grocery</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:    #F2EAD3;
+    --cream2:   #EDE0C4;
+    --cream3:   #E5D5B0;
+    --crimson:  #7A1515;
+    --crimson2: #9B1C1C;
+    --crimson-light: rgba(122,21,21,0.08);
+    --crimson-mid:   rgba(122,21,21,0.15);
+    --gold:     #B8922A;
+    --gold2:    #D4A93A;
+    --gold-light: rgba(184,146,42,0.15);
+    --dark:     #2C1A0E;
+    --muted:    #7A6040;
+    --muted2:   #9A7A50;
+    --green:    #3A7A4A;
+    --border:   rgba(122,21,21,0.18);
+    --border-gold: rgba(184,146,42,0.3);
+    --card-bg:  rgba(255,250,238,0.9);
+    --shadow:   0 4px 24px rgba(122,21,21,0.10);
+    --shadow2:  0 8px 32px rgba(122,21,21,0.16);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+
+  body {
+    background: var(--cream);
+    color: var(--dark);
+    font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23B8922A' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--crimson);
+    background-image:
+      radial-gradient(ellipse 120% 80% at 50% -10%, rgba(184,146,42,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 60% at 90% 110%, rgba(0,0,0,0.25) 0%, transparent 70%);
+    padding: 48px 24px 52px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold) 30%, var(--gold2) 50%, var(--gold) 70%, transparent 100%);
+  }
+  .hero::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold) 30%, var(--gold2) 50%, var(--gold) 70%, transparent 100%);
+  }
+  .hero-corner {
+    position: absolute; width: 70px; height: 70px; opacity: 0.22; pointer-events: none;
+  }
+  .hero-corner.tl { top: 12px; left: 12px; }
+  .hero-corner.tr { top: 12px; right: 12px; transform: scaleX(-1); }
+  .hero-corner.bl { bottom: 12px; left: 12px; transform: scaleY(-1); }
+  .hero-corner.br { bottom: 12px; right: 12px; transform: scale(-1,-1); }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(184,146,42,0.15);
+    border: 1px solid rgba(184,146,42,0.4);
+    color: var(--gold2);
+    font-size: 11px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase;
+    padding: 6px 18px; border-radius: 100px; margin-bottom: 20px;
+    animation: fadeDown 0.6s ease both;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 16vw, 6rem);
+    font-weight: 900; color: var(--cream); letter-spacing: 0.05em; line-height: 1;
+    animation: fadeDown 0.6s 0.08s ease both;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1rem, 4vw, 1.4rem); font-style: italic; font-weight: 400;
+    color: var(--gold2); letter-spacing: 0.06em; margin-top: 6px;
+    animation: fadeDown 0.6s 0.15s ease both;
+  }
+  .hero-tagline {
+    font-size: 13px; font-weight: 300; color: rgba(242,234,211,0.6);
+    margin-top: 8px; letter-spacing: 0.05em;
+    animation: fadeDown 0.6s 0.2s ease both;
+  }
+  .hero-divider {
+    display: flex; align-items: center; gap: 12px;
+    margin: 22px auto 0; max-width: 180px;
+    animation: fadeDown 0.6s 0.25s ease both;
+  }
+  .hero-divider-line { flex: 1; height: 1px; background: rgba(184,146,42,0.4); }
+  .hero-divider-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 8px var(--gold2); }
+  .hero-link { margin-top: 22px; animation: fadeDown 0.6s 0.3s ease both; }
+  .hero-link a {
+    display: inline-block; background: var(--gold); color: var(--crimson);
+    font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    text-decoration: none; padding: 11px 26px; border-radius: 100px;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  }
+  .hero-link a:hover { background: var(--gold2); transform: translateY(-1px); }
+  .hero-link a:active { transform: scale(0.97); }
+
+  /* STICKY TOPBAR */
+  .topbar {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--crimson2);
+    border-bottom: 2px solid var(--gold);
+    padding: 10px 14px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .search-wrap { position: relative; width: 100%; }
+  .search-wrap svg {
+    position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+    color: rgba(242,234,211,0.4); pointer-events: none;
+  }
+  .search-wrap input {
+    width: 100%; background: rgba(0,0,0,0.25);
+    border: 1px solid rgba(184,146,42,0.3); border-radius: 10px;
+    color: var(--cream); font-family: 'Lato', sans-serif; font-size: 15px;
+    padding: 11px 14px 11px 44px; outline: none;
+    transition: border-color 0.2s, background 0.2s; -webkit-appearance: none;
+  }
+  .search-wrap input::placeholder { color: rgba(242,234,211,0.38); }
+  .search-wrap input:focus { border-color: var(--gold2); background: rgba(0,0,0,0.35); }
+
+  .cat-pills { display: flex; gap: 7px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+  .cat-pills::-webkit-scrollbar { display: none; }
+  .pill {
+    flex-shrink: 0; font-family: 'Lato', sans-serif;
+    font-size: 12px; font-weight: 700; padding: 7px 14px; border-radius: 100px;
+    border: 1px solid rgba(184,146,42,0.32); background: rgba(255,255,255,0.07);
+    color: rgba(242,234,211,0.72); cursor: pointer; white-space: nowrap; letter-spacing: 0.04em;
+    transition: all 0.2s; -webkit-tap-highlight-color: transparent;
+  }
+  .pill:hover, .pill.active {
+    background: var(--gold); color: var(--crimson); border-color: var(--gold);
+  }
+
+  /* LAYOUT */
+  .layout { max-width: 720px; margin: 0 auto; padding: 28px 14px 80px; }
+
+  /* SECTION */
+  .section { margin-bottom: 44px; animation: fadeUp 0.4s ease both; }
+  .section-header {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--border);
+    position: relative;
+  }
+  .section-header::after {
+    content: ''; position: absolute; bottom: -2px; left: 0;
+    width: 52px; height: 2px; background: var(--gold);
+  }
+  .section-icon { font-size: 1.35rem; line-height: 1; }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.15rem, 5vw, 1.5rem); font-weight: 700; color: var(--crimson); line-height: 1.1;
+  }
+  .section-count {
+    margin-left: auto; font-size: 11px; font-weight: 700; color: var(--muted2);
+    letter-spacing: 0.08em; background: var(--crimson-light);
+    padding: 3px 10px; border-radius: 100px; border: 1px solid var(--border); white-space: nowrap;
+  }
+
+  /* ITEMS LIST */
+  .items-list { display: flex; flex-direction: column; gap: 10px; }
+
+  /* ITEM CARD */
+  .item-card {
+    background: var(--card-bg); border: 1px solid rgba(122,21,21,0.12);
+    border-radius: 14px; padding: 15px 16px;
+    display: flex; align-items: center; gap: 12px;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+    position: relative; overflow: hidden;
+  }
+  .item-card::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+    background: linear-gradient(180deg, var(--crimson) 0%, var(--gold) 100%);
+    opacity: 0; transition: opacity 0.2s;
+  }
+  .item-card:hover { box-shadow: var(--shadow2); border-color: rgba(122,21,21,0.28); transform: translateY(-1px); }
+  .item-card:hover::before { opacity: 1; }
+  .item-card:active { transform: scale(0.99); }
+  .item-card.special {
+    border-color: rgba(184,146,42,0.38);
+    background: linear-gradient(135deg, #fffaee 0%, #fff5d8 100%);
+  }
+  .item-card.special::before { opacity: 1; background: linear-gradient(180deg, var(--gold) 0%, var(--crimson) 100%); }
+
+  .item-left { display: flex; flex-direction: column; flex: 1; min-width: 0; gap: 7px; }
+  .item-name-row { display: flex; align-items: flex-start; gap: 8px; }
+  .veg-box {
+    flex-shrink: 0; width: 16px; height: 16px;
+    border: 1.5px solid var(--green); border-radius: 3px;
+    display: flex; align-items: center; justify-content: center; margin-top: 2px;
+  }
+  .veg-box::after { content: ''; width: 8px; height: 8px; background: var(--green); border-radius: 50%; }
+  .item-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.98rem; font-weight: 700; color: var(--dark); line-height: 1.3;
+  }
+  .item-name em { font-style: italic; color: var(--crimson); }
+  .chef-badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold); background: rgba(184,146,42,0.12);
+    border: 1px solid rgba(184,146,42,0.35); padding: 2px 9px; border-radius: 100px; width: fit-content;
+  }
+
+  /* PRICES */
+  .item-right { flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
+  .price-single {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; font-weight: 700; color: var(--crimson);
+  }
+  .prices-sml { display: flex; gap: 5px; }
+  .price-chip {
+    display: flex; flex-direction: column; align-items: center;
+    background: var(--crimson-light); border: 1px solid var(--border);
+    border-radius: 8px; padding: 5px 8px; min-width: 46px;
+    transition: background 0.2s;
+  }
+  .item-card:hover .price-chip { background: var(--crimson-mid); }
+  .price-label { font-size: 9px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted2); margin-bottom: 2px; }
+  .price-val { font-family: 'Playfair Display', serif; font-size: 0.88rem; font-weight: 700; color: var(--crimson); }
+
+  /* COMING SOON */
+  .coming-soon {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 30px 20px; border: 1.5px dashed rgba(122,21,21,0.2); border-radius: 14px;
+    color: var(--muted2); font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-style: italic; background: rgba(255,255,255,0.4);
+  }
+
+  /* NO RESULTS */
+  .no-results {
+    text-align: center; padding: 60px 20px; color: var(--muted2);
+    font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic;
+  }
+  .no-results strong { color: var(--crimson); font-style: normal; }
+
+  /* FOOTER */
+  footer {
+    background: var(--crimson); text-align: center;
+    padding: 28px 20px; border-top: 3px solid var(--gold);
+    color: rgba(242,234,211,0.6); font-size: 13px; letter-spacing: 0.04em;
+  }
+  footer::before {
+    content: '✦ BILANDI\'S ✦'; display: block;
+    font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700;
+    color: var(--gold); letter-spacing: 0.22em; margin-bottom: 8px;
+  }
+  footer a { color: var(--gold2); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  /* ANIMATIONS */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* RESPONSIVE TABLET+ */
+  @media (min-width: 600px) {
+    .items-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  }
+
+  /* SMALL PHONES */
+  @media (max-width: 380px) {
+    .prices-sml { gap: 4px; }
+    .price-chip { min-width: 40px; padding: 4px 5px; }
+    .price-val { font-size: 0.82rem; }
+    .price-single { font-size: 1.05rem; }
+    .item-name { font-size: 0.9rem; }
+    .hero h1 { font-size: 2.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <svg class="hero-corner tl" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 66 L4 4 L66 4" stroke="#D4A93A" stroke-width="1.5" fill="none"/>
+    <path d="M4 4 L18 18" stroke="#D4A93A" stroke-width="1" fill="none"/>
+    <circle cx="4" cy="4" r="2.5" fill="#D4A93A"/>
+    <path d="M28 4 Q18 14 4 28" stroke="#D4A93A" stroke-width="0.7" fill="none" opacity="0.5"/>
+  </svg>
+  <svg class="hero-corner tr" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 66 L4 4 L66 4" stroke="#D4A93A" stroke-width="1.5" fill="none"/>
+    <path d="M4 4 L18 18" stroke="#D4A93A" stroke-width="1" fill="none"/>
+    <circle cx="4" cy="4" r="2.5" fill="#D4A93A"/>
+    <path d="M28 4 Q18 14 4 28" stroke="#D4A93A" stroke-width="0.7" fill="none" opacity="0.5"/>
+  </svg>
+  <svg class="hero-corner bl" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 66 L4 4 L66 4" stroke="#D4A93A" stroke-width="1.5" fill="none"/>
+    <path d="M4 4 L18 18" stroke="#D4A93A" stroke-width="1" fill="none"/>
+    <circle cx="4" cy="4" r="2.5" fill="#D4A93A"/>
+    <path d="M28 4 Q18 14 4 28" stroke="#D4A93A" stroke-width="0.7" fill="none" opacity="0.5"/>
+  </svg>
+  <svg class="hero-corner br" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 66 L4 4 L66 4" stroke="#D4A93A" stroke-width="1.5" fill="none"/>
+    <path d="M4 4 L18 18" stroke="#D4A93A" stroke-width="1" fill="none"/>
+    <circle cx="4" cy="4" r="2.5" fill="#D4A93A"/>
+    <path d="M28 4 Q18 14 4 28" stroke="#D4A93A" stroke-width="0.7" fill="none" opacity="0.5"/>
+  </svg>
+
+  <div class="hero-badge">🍕 Full Menu</div>
+  <h1>BILANDI'S</h1>
+  <p class="hero-sub">Cafe &nbsp;|&nbsp; Bakery &nbsp;|&nbsp; Grocery</p>
+  <p class="hero-tagline">Where Every Celebration Begins</p>
+  <div class="hero-divider">
+    <div class="hero-divider-line"></div>
+    <div class="hero-divider-dot"></div>
+    <div class="hero-divider-line"></div>
+  </div>
+  <div class="hero-link">
+    <a href="https://www.bilandis.com" target="_blank">↗ Visit bilandis.com</a>
+  </div>
+</header>
+
+<!-- STICKY BAR -->
+<div class="topbar">
+  <div class="search-wrap">
+    <svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+    </svg>
+    <input type="text" id="searchInput" placeholder="Search dishes…" autocomplete="off" autocorrect="off" spellcheck="false">
+  </div>
+  <div class="cat-pills" id="catPills"></div>
+</div>
+
+<!-- MAIN -->
+<main class="layout" id="mainLayout"></main>
+
+<footer>
+  Pure Vegetarian 🌿 &nbsp;·&nbsp; All prices in ₹ &nbsp;·&nbsp; <a href="https://www.bilandis.com" target="_blank">bilandis.com</a>
+</footer>
+
+<script>
+const SIZES = ['S','M','L'];
+
+const MENU = [
+  { cat:'Pizza', icon:'🍕', items:[
+    { name:'Margherita Pizza', prices:[109,219,319] },
+    { name:'OCT Pizza', prices:[149,239,349] },
+    { name:'Farm Fresh Pizza', prices:[159,249,359] },
+    { name:'Mexican Pizza', prices:[169,259,369] },
+    { name:'Deluxe Veggie Pizza', prices:[179,269,379] },
+    { name:'Veg Extravaganza Pizza', prices:[189,279,389] },
+    { name:'Cheese N Corn Pizza', prices:[199,299,409] },
+    { name:'Indi Makhni Paneer Pizza', prices:[209,309,409] },
+    { name:'Kadai Paneer Pizza', prices:[209,309,409] },
+    { name:'Peppy Paneer Pizza', prices:[219,329,439] },
+    { name:'Hot Tandoori Pizza', prices:[219,339,459] },
+    { name:"Bilandi's Special Pizza", prices:[229,349,469], special:true },
+  ]},
+  { cat:'Special Pizzas', icon:'🌋', items:[
+    { name:'4 In 1 Pizza (Choose Any 4 Flavors)', price:449 },
+    { name:'Volcano Farm Fresh', price:439 },
+    { name:'Volcano Mexican', price:449 },
+    { name:'Volcano Cheese N Corn', price:459 },
+    { name:'Volcano Hot Tandoori', price:469 },
+    { name:'Volcano Peppy Paneer', price:479 },
+  ]},
+  { cat:'Burgers', icon:'🍔', items:[
+    { name:'Aloo Tikki Burger', price:39 },
+    { name:'Cheese Burger', price:59 },
+    { name:'Mexican Burger', price:59 },
+    { name:'Paneer Burger', price:69 },
+    { name:'Hot Tandoori Burger', price:79 },
+    { name:"Bilandi's Special Burger", price:109, special:true },
+  ]},
+  { cat:'Sandwiches', icon:'🥪', items:[
+    { name:'Cold Sandwich', price:59 },
+    { name:'Veg Grilled Sandwich', price:69 },
+    { name:'Cheese Grilled Sandwich', price:89 },
+    { name:'Paneer Sandwich', price:89 },
+    { name:'Corn N Cheese Sandwich', price:99 },
+    { name:'Peri Peri Sandwich', price:119 },
+    { name:'Tandoori Sandwich', price:119 },
+    { name:'Makhni Sandwich', price:119 },
+    { name:'Veg Club Sandwich', price:149 },
+    { name:'Cheese Club Sandwich', price:169 },
+  ]},
+  { cat:'Wraps', icon:'🌯', items:[
+    { name:'Aloo Tikki Wrap', price:69 },
+    { name:'Paneer Wrap', price:99 },
+    { name:'Cheese N Corn Wrap', price:119 },
+  ]},
+  { cat:'Patties', icon:'🫓', items:[
+    { name:'Cheese N Corn Patty', price:39 },
+    { name:'Tandoori Patty', price:39 },
+    { name:'Mexican Patty', price:49 },
+    { name:'Pizza Patty', price:59 },
+  ]},
+  { cat:'Fries', icon:'🍟', items:[
+    { name:'Plain Fries', price:79 },
+    { name:'Cheese Loaded Fries', price:79 },
+    { name:'Masala Fries', price:89 },
+    { name:'Tandoori Fries', price:99 },
+    { name:'Peri Peri Fries', price:99 },
+  ]},
+  { cat:'Pasta', icon:'🍝', items:[
+    { name:'Red Sauce Pasta', price:139 },
+    { name:'White Sauce Pasta', price:149 },
+    { name:'Makhni Pasta', price:149 },
+    { name:'Tandoori Pasta', price:149 },
+    { name:'Peri Peri Pasta', price:149 },
+    { name:'Mix Sauce Pasta', price:159 },
+  ]},
+  { cat:'Garlic Bread', icon:'🧄', items:[
+    { name:'Toast Garlic Bread', price:79 },
+    { name:'Stuffed Garlic Bread', price:139 },
+    { name:'Makhni Cheese Garlic Bread', price:139 },
+  ]},
+  { cat:'Maggi', icon:'🍜', items:[
+    { name:'Veg Maggie', price:69 },
+    { name:'Tandoori Maggie', price:89 },
+    { name:'Peri Peri Maggie', price:89 },
+    { name:'Makhni Maggie', price:89 },
+    { name:'Cheese Maggie', price:109 },
+    { name:'Cheese N Corn Maggie', price:109 },
+  ]},
+  { cat:'Subs', icon:'🥖', items:[
+    { name:'Aloo Patty Sub (Garlic/Multigrain)', price:89 },
+    { name:'Veggie Delight Sub (Garlic/Multigrain)', price:89 },
+    { name:'Paneer Tikka Sub (Garlic/Multigrain)', price:109 },
+    { name:'Cheese N Corn Sub (Garlic/Multigrain)', price:129 },
+  ]},
+  { cat:'Chinese', icon:'🥢', items:[
+    { name:'Spring Roll', price:69 },
+    { name:'Cheese Cigar Roll', price:89 },
+    { name:'Cheese Balls', price:129 },
+    { name:'Honey Chilli Potato', price:139 },
+    { name:'Paneer Chilli', price:179 },
+  ]},
+  { cat:'Salads', icon:'🥗', items:[
+    { name:'Paneer Salad', price:119 },
+    { name:'Corn Paneer Salad', price:129 },
+    { name:"Bilandi's Special Salad", price:149, special:true },
+  ]},
+  { cat:'Coffee', icon:'☕', items:[
+    { name:'Hot Coffee', price:49 },
+    { name:'Hazelnut Hot Coffee', price:89 },
+    { name:'Cold Coffee', price:69 },
+    { name:'Cold Coffee with Ice Cream', price:89 },
+  ]},
+  { cat:'Shakes', icon:'🥤', items:[
+    { name:'Vanilla Shake', price:59 },
+    { name:'Vanilla Shake with Ice Cream', price:79 },
+    { name:'Strawberry Shake', price:69 },
+    { name:'Strawberry Shake with Ice Cream', price:89 },
+    { name:'Mango Shake', price:69 },
+    { name:'Mango Shake with Ice Cream', price:89 },
+    { name:'Butterscotch Shake', price:69 },
+    { name:'Butterscotch Shake with Ice Cream', price:89 },
+    { name:'Chocolate Shake', price:79 },
+    { name:'Chocolate Shake with Ice Cream', price:99 },
+    { name:'Oreo Shake With Ice Cream', price:119 },
+    { name:'Blue Berry Shake With Ice Cream', price:119 },
+    { name:'KitKat Shake With Ice Cream', price:129 },
+    { name:'Red Velvet Shake With Ice Cream', price:139 },
+    { name:'Brownie Shake With Ice Cream', price:149 },
+    { name:'Nutella Shake With Ice Cream', price:149 },
+    { name:'Biscoff Shake With Ice Cream', price:159, special:true },
+  ]},
+  { cat:'Tea', icon:'🍵', items:[
+    { name:'Masala Tea', price:19 },
+    { name:'Elaichi Tea', price:25 },
+    { name:'Rose Tea', price:29 },
+  ]},
+  { cat:'Mocktails & Drinks', icon:'🍹', items:[
+    { name:'Jeera Mojito', price:79 },
+    { name:'Mint Mojito', price:79 },
+    { name:'Water Melon', price:89 },
+    { name:'Blue Curacao', price:99 },
+    { name:'Black Current', price:109 },
+  ]},
+  { cat:'Desserts', icon:'🍫', items:[
+    { name:'Brownie', price:119 },
+    { name:'Brownie with Ice Cream', price:159 },
+    { name:'Chocolate Sandwich', price:179 },
+  ]},
+  { cat:'Chaat', icon:'🍛', comingSoon:true, items:[] },
+  { cat:'Noodles', icon:'🍜', comingSoon:true, items:[] },
+];
+
+// Pills
+const catPills = document.getElementById('catPills');
+function makePill(text, catVal) {
+  const p = document.createElement('button');
+  p.className = 'pill';
+  p.textContent = text;
+  p.dataset.cat = catVal;
+  return p;
+}
+const allPill = makePill('All', 'all');
+allPill.classList.add('active');
+catPills.appendChild(allPill);
+MENU.forEach(s => catPills.appendChild(makePill(s.icon + ' ' + s.cat, s.cat)));
+
+// Render
+const layout = document.getElementById('mainLayout');
+
+function esc(t) {
+  return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/'/g,'&#x27;');
+}
+
+function renderMenu(filter, search) {
+  layout.innerHTML = '';
+  const sq = (search || '').toLowerCase().trim();
+  filter = filter || 'all';
+
+  MENU.forEach((section, si) => {
+    if (filter !== 'all' && filter !== section.cat) return;
+
+    if (section.comingSoon) {
+      if (sq) return;
+      const sec = document.createElement('section');
+      sec.className = 'section';
+      sec.style.animationDelay = (si * 0.03) + 's';
+      sec.innerHTML = `<div class="section-header">
+        <span class="section-icon">${section.icon}</span>
+        <h2 class="section-title">${esc(section.cat)}</h2>
+      </div>
+      <div class="coming-soon">✨ Something delicious coming soon…</div>`;
+      layout.appendChild(sec);
+      return;
+    }
+
+    const filtered = sq
+      ? section.items.filter(it => it.name.toLowerCase().includes(sq))
+      : section.items;
+    if (!filtered.length) return;
+
+    const sec = document.createElement('section');
+    sec.className = 'section';
+    sec.id = 'sec-' + section.cat.replace(/\s+/g,'_');
+    sec.style.animationDelay = (si * 0.03) + 's';
+
+    sec.innerHTML = `<div class="section-header">
+      <span class="section-icon">${section.icon}</span>
+      <h2 class="section-title">${esc(section.cat)}</h2>
+      <span class="section-count">${filtered.length} item${filtered.length>1?'s':''}</span>
+    </div>`;
+
+    const list = document.createElement('div');
+    list.className = 'items-list';
+
+    filtered.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'item-card' + (item.special ? ' special' : '');
+
+      const nameEsc = esc(item.name).replace("Bilandi&#x27;s Special", "<em>Bilandi's Special</em>");
+
+      const priceHTML = item.prices
+        ? `<div class="prices-sml">${item.prices.map((p,i) =>
+            `<div class="price-chip"><span class="price-label">${SIZES[i]}</span><span class="price-val">₹${p}</span></div>`
+          ).join('')}</div>`
+        : `<span class="price-single">₹${item.price}</span>`;
+
+      card.innerHTML = `
+        <div class="item-left">
+          <div class="item-name-row">
+            <div class="veg-box" title="Pure Veg"></div>
+            <div class="item-name">${nameEsc}</div>
+          </div>
+          ${item.special ? '<span class="chef-badge">⭐ Chef\'s Pick</span>' : ''}
+        </div>
+        <div class="item-right">${priceHTML}</div>`;
+
+      list.appendChild(card);
+    });
+
+    sec.appendChild(list);
+    layout.appendChild(sec);
+  });
+
+  if (!layout.children.length) {
+    layout.innerHTML = `<div class="no-results">No dishes found for "<strong>${esc(search)}</strong>"<br><br>Try a different keyword 🙏</div>`;
+  }
+}
+
+// Events
+catPills.addEventListener('click', e => {
+  const pill = e.target.closest('.pill');
+  if (!pill) return;
+  document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+  pill.classList.add('active');
+  document.getElementById('searchInput').value = '';
+  renderMenu(pill.dataset.cat, '');
+  if (pill.dataset.cat !== 'all') {
+    setTimeout(() => {
+      const el = document.getElementById('sec-' + pill.dataset.cat.replace(/\s+/g,'_'));
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 60);
+  }
+});
+
+document.getElementById('searchInput').addEventListener('input', e => {
+  document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+  document.querySelector('.pill[data-cat="all"]').classList.add('active');
+  renderMenu('all', e.target.value);
+});
+
+renderMenu('all', '');
+</script>
+</body>
+</html>

@@ -384,6 +384,826 @@
             color: var(--muted-foreground);
 
         }
+.celebration-image {
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Different images for each card */
+.birthday {
+  background-image: url("birthday.jpeg");
+}
+
+.engagement {
+  background-image: url("hall.jpeg");
+}
+
+.corporate {
+  background-image: url("anniversary.jpeg");
+}
+
+.family {
+  background-image: url("family.jpeg");
+}
+        /* Location Section */
+        .location {
+            padding: 3rem 1rem;
+            background: white;
+        }
+
+        .location-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .location-info {
+            background: var(--background);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .location-info h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .location-address {
+            color: var(--foreground);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .location-hours {
+            color: var(--muted-foreground);
+            margin-bottom: 1.5rem;
+        }
+
+        .location-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .location-buttons {
+                flex-direction: row;
+            }
+
+            .location-buttons .btn {
+                flex: 1;
+            }
+        }
+
+        /* Reviews Section */
+        .reviews {
+            padding: 3rem 1rem;
+            background: var(--background);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .review-stars {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .review-text {
+            color: var(--foreground);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .review-author {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 1rem 1.5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Sticky Order Button */
+        .sticky-button {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            z-index: 1000;
+        }
+
+        .sticky-button a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .sticky-button a:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            transform: scale(1.05);
+        }
+
+        .sticky-button a:active {
+            transform: scale(0.95);
+        }
+
+        .sticky-button-icon {
+            font-size: 0.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .sticky-button a {
+                flex-direction: row;
+                padding: 0.75rem 1.5rem;
+                font-size: 0.95rem;
+            }
+
+            .sticky-button-icon {
+                font-size: 0.5rem;
+            }
+        }
+
+        /* Responsive Typography */
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-tagline {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .accordion-header {
+                font-size: 0.95rem;
+            }
+
+            .menu-item {
+                flex-wrap: wrap;
+            }
+
+            .item-price {
+                width: 100%;
+                text-align: left;
+                margin-left: 0;
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-banner">
+            🎉 Birthday today? Order your cake in minutes.
+        </div>
+
+        <div class="hero-content">
+            <h1>BILANDI'S</h1>
+            <div class="hero-subtitle">Cafe | Bakery | Grocery</div>
+            <p class="hero-tagline">Where Every Celebration Begins</p>
+
+            <div class="hero-buttons">
+                <a href="https://www.bilandis.com/menu" class="btn btn-primary">View Menu</a>
+                <a href="#celebration" class="btn btn-outline">Celebration Hall</a>
+                <a href="https://wa.me/919828298009" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Order Cake</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Options Section -->
+    <section class="quick-options">
+        <div class="container">
+            <h2 class="section-title">What would you like to explore?</h2>
+            <p class="section-subtitle">Choose your next experience at Bilandi's</p>
+
+            <div class="options-grid">
+                <button class="option-card" onclick="scrollToSection('#menu')">
+                    <div class="option-icon">🍕</div>
+                    <div class="option-label">View Menu</div>
+                    <div class="option-desc">Browse our full menu</div>
+                </button>
+                <button class="option-card" onclick="scrollToSection('#celebration')">
+                    <div class="option-icon">🎉</div>
+                    <div class="option-label">Celebration Hall</div>
+                    <div class="option-desc">Book our hall</div>
+                </button>
+                <button class="option-card" onclick="window.open('https://wa.me/919828298009', '_blank')">
+                    <div class="option-icon">🎂</div>
+                    <div class="option-label">Order Cake</div>
+                    <div class="option-desc">Custom cakes</div>
+                </button>
+                <button class="option-card" onclick="scrollToSection('#location')">
+                    <div class="option-icon">📍</div>
+                    <div class="option-label">Location</div>
+                    <div class="option-desc">Find us</div>
+                </button>
+                <button class="option-card" onclick="scrollToSection('#footer')">
+                    <div class="option-icon">ℹ️</div>
+                    <div class="option-label">About Us</div>
+                    <div class="option-desc">Our story</div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <p class="section-subtitle">Delicious food at affordable prices</p>
+
+            <div class="menu-accordion" id="menuAccordion"></div>
+
+            <div class="menu-cta">
+                <p>Ready to order?</p>
+                <a href="https://wa.me/919828298009" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Order on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Celebration Hall Section -->
+    <section id="celebration" class="celebration">
+        <div class="container">
+            <h2 class="section-title">Celebration Hall</h2>
+            <p class="section-subtitle">Perfect for your special moments</p>
+
+            <div class="celebration-grid">
+                <div class="celebration-card">
+                    <div class="celebration-image birthday"></div>
+                    <div class="celebration-content">
+                        <div class="celebration-title">Birthday Parties</div>
+                        <div class="celebration-desc">Celebrate your special day</div>
+                    </div>
+                </div>
+                <div class="celebration-card">
+                   <div class="celebration-image engagement"></div>
+
+                    <div class="celebration-content">
+                        <div class="celebration-title">Engagements</div>
+                        <div class="celebration-desc">Mark your commitment</div>
+                    </div>
+                </div>
+                <div class="celebration-card">
+<div class="celebration-image corporate"></div>
+                    <div class="celebration-content">
+                        <div class="celebration-title">Corporate Events</div>
+                        <div class="celebration-desc">Professional gatherings</div>
+                    </div>
+                </div>
+                <div class="celebration-card">
+<div class="celebration-image family"></div>                    <div class="celebration-content">
+                        <div class="celebration-title">Family Gatherings</div>
+                        <div class="celebration-desc">Quality time together</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="location-content">
+            <h2 class="section-title">Find Us</h2>
+            <p class="section-subtitle">Visit us today</p>
+
+            <div class="location-info">
+                <h3>Bilandi's Cafe & Bakery</h3>
+                <div class="location-address">Gajsinghpur, Rajasthan</div>
+                <div class="location-hours">Open Daily: 8:00 AM - 9:30 PM</div>
+
+                <div class="location-buttons">
+                    <a href="https://maps.app.goo.gl/M8x8Yy1FaAqjk7R19" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Get Directions</a>
+                    <a href="tel:+91 9828298009" class="btn btn-secondary">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title">Customer Reviews 4.9 ★ </h2>
+            <p class="section-subtitle">What our customers say</p>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">Bilandi Bakers has become a part of all our special moments. Every celebration feels incomplete without their cake. Not only do the cakes look stunning, but the taste is always full of flavor. You can truly feel the love and effort they put into every creation. They never fail to make our occasions extra special. Thank you for always adding sweetness to our happiest memories! 💛
+</div>
+                    <div class="review-author">- Jass Brar</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">I had a wonderful experience at this bakery. The cake was very fresh, beautifully presented, and tasted amazing. They have a good variety of cakes and pastries, and the prices are reasonable.</div>
+                    <div class="review-author">- Himani Arora</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">Absolutely loved this bakery! Everything was fresh, delicious, and made with so much care. The aroma as you walk in is irresistible, and the taste is even better. From soft breads to perfectly sweet pastries, every item feels special.
+The cake i was ordered, absolutely amazing. Fresh, soft, and perfectly balanced in sweetness. Every bite tasted rich and homemade, not artificial or overly sugary. The design was beautiful and the quality was top-notch. Easily one of the best cakes I’ve had. Will definitely order again. Highly recommended!
+</div>
+<div class="review-author">- Kapil</div>
+                </div>
+ <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">This place is more than just a shop for me — it’s a dream built with love, hard work, and endless dedication. Every cake is made with so much care, and you can taste the warmth and sincerity in every bite. The quality, freshness, and service are always outstanding. Watching the world’s best gentleman pour his heart into this shop makes me incredibly proud. This is a place where passion meets perfection. Truly the best in every way, and always close to my heart ❤️🍰
+
+</div>
+                    <div class="review-author">- Gurleen Kaur</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>BILANDI'S</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">Premium Cafe, Bakery & Grocery in Rajasthan</p>
+                </div>
+                <div class="footer-section">
+                    <h4 style="color: white; margin-bottom: 1rem;">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="https://wa.me/919828298009" target="_blank" rel="noopener noreferrer">Order Online</a></li>
+                        <li><a href="#celebration">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 style="color: white; margin-bottom: 1rem;">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+91 9828298009">+91 9828298009</a></li>
+                        <l<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilandi's Cafe | Bakery | Grocery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #8B0000;
+            --secondary: #D4AF37;
+            --background: #F8F3E7;
+            --foreground: #2C2C2C;
+            --card: #FFFFFF;
+            --muted: #E8E0D5;
+            --muted-foreground: #7A7A7A;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--foreground);
+            background: var(--background);
+            line-height: 1.6;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: bold;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        .btn-primary:active {
+            transform: scale(0.95);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            color: var(--foreground);
+        }
+
+        .btn-secondary:hover {
+            opacity: 0.9;
+        }
+
+        .btn-secondary:active {
+            transform: scale(0.95);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: var(--background);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .hero-banner {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-tagline {
+            font-size: 1.1rem;
+            color: var(--foreground);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .hero-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 4rem;
+            }
+        }
+
+        /* Quick Options */
+        .quick-options {
+            padding: 3rem 1rem;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--foreground);
+            margin-bottom: 2rem;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .option-card {
+            background: linear-gradient(135deg, var(--background), var(--muted));
+            border: none;
+            border-radius: 0.75rem;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .option-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .option-card:active {
+            transform: scale(0.95);
+        }
+
+        .option-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .option-card:hover .option-icon {
+            transform: scale(1.2);
+        }
+
+        .option-label {
+            font-weight: 600;
+            color: var(--foreground);
+            margin-bottom: 0.25rem;
+        }
+
+        .option-desc {
+            font-size: 0.8rem;
+            color: var(--muted-foreground);
+        }
+
+        /* Menu Section */
+        .menu {
+            padding: 3rem 1rem;
+            background: white;
+        }
+
+        .menu-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            border: 1px solid var(--muted);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background: var(--muted);
+            padding: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--foreground);
+            transition: all 0.3s ease;
+            border: none;
+            width: 100%;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .accordion-header:hover {
+            background: var(--secondary);
+            color: var(--foreground);
+        }
+
+        .accordion-header.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .accordion-toggle {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-header.active .accordion-toggle {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 1.5rem;
+            background: white;
+            border-top: 1px solid var(--muted);
+        }
+
+        .accordion-content.active {
+            display: block;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--muted);
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-name {
+            font-weight: 500;
+            color: var(--foreground);
+            flex: 1;
+        }
+
+        .item-price {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-left: 1rem;
+            text-align: right;
+            font-size: 0.9rem;
+        }
+
+        .menu-cta {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--muted);
+        }
+
+        .menu-cta p {
+            margin-bottom: 1rem;
+            color: var(--muted-foreground);
+        }
+
+        /* Celebration Hall Section */
+        .celebration {
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, var(--background), var(--muted));
+        }
+
+        .celebration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .celebration-card {
+            background: white;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .celebration-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .celebration-image {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .celebration-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .celebration-title {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .celebration-desc {
+            font-size: 0.9rem;
+            color: var(--muted-foreground);
+
+        }
         .celebration-image {
           height: 180px;
           border-radius: 15px 15px 0 0;
@@ -991,6 +1811,229 @@ The cake i was ordered, absolutely amazing. Fresh, soft, and perfectly balanced 
                 { name: 'Rose Tea', prices: '₹29' }
             ],
             'Mocktails': [
+                { name: 'Jeera Mojito', prices: '₹79' },
+                { name: 'Mint Mojito', prices: '₹79' },
+                { name: 'Water Melon', prices: '₹89' },
+                { name: 'Blue Curacao', prices: '₹99' },
+                { name: 'Black Current', prices: '₹109' }
+            ],
+            'Desserts': [
+                { name: 'Brownie', prices: '₹119' },
+                { name: 'Brownie with Ice Cream', prices: '₹159' },
+                { name: 'Chocolate Sandwich', prices: '₹179' }
+            ]
+        };
+
+        function initMenu() {
+            const accordion = document.getElementById('menuAccordion');
+            accordion.innerHTML = '';
+
+            for (const [category, items] of Object.entries(menuData)) {
+                const item = document.createElement('div');
+                item.className = 'accordion-item';
+                item.innerHTML = `
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>${category}</span>
+                        <span class="accordion-toggle">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        ${items.map(food => `
+                            <div class="menu-item">
+                                <span class="item-name">${food.name}</span>
+                                <span class="item-price">${food.prices}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                accordion.appendChild(item);
+            }
+        }
+
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            header.classList.toggle('active');
+            content.classList.toggle('active');
+        }
+
+        function scrollToSection(sectionId) {
+            const element = document.querySelector(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Initialize menu on page load
+        document.addEventListener('DOMContentLoaded', initMenu);
+    </script>
+
+</body>
+</html>i><a href="https://wa.me/919828298009" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                        <li>Gajsinghpur, Rajasthan</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 style="color: white; margin-bottom: 1rem;">Hours</h4>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">Open Daily<br>8:00 AM - 9:30 PM</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bilandi's Cafe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Order Button -->
+    <div class="sticky-button">
+        <a href="https://wa.me/919828298009" target="_blank" rel="noopener noreferrer">
+            <span class="sticky-button-icon">🍰</span>
+            <span>Order Now</span>
+        </a>
+    </div>
+
+    <script>
+        const menuData = {
+            'Pizza': [
+                { name: 'Margherita Pizza', prices: '₹109 | ₹219 | ₹319' },
+                { name: 'OCT Pizza', prices: '₹149 | ₹239 | ₹349' },
+                { name: 'Farm Fresh Pizza', prices: '₹159 | ₹249 | ₹359' },
+                { name: 'Mexican Pizza', prices: '₹169 | ₹259 | ₹369' },
+                { name: 'Deluxe Veggie Pizza', prices: '₹179 | ₹269 | ₹379' },
+                { name: 'Veg Extravaganza Pizza', prices: '₹189 | ₹279 | ₹389' },
+                { name: 'Cheese N Corn Pizza', prices: '₹199 | ₹299 | ₹409' },
+                { name: 'Indi Makhni Paneer Pizza', prices: '₹209 | ₹309 | ₹409' },
+                { name: 'Kadai Paneer Pizza', prices: '₹209 | ₹309 | ₹409' },
+                { name: 'Peppy Paneer Pizza', prices: '₹219 | ₹329 | ₹439' },
+                { name: 'Hot Tandoori Pizza', prices: '₹219 | ₹339 | ₹459' },
+                { name: 'Bilandi\'s Special Pizza ⭐', prices: '₹229 | ₹349 | ₹469' }
+            ],
+            'Special Pizzas': [
+                { name: '4 In 1 Pizza (Choose Any 4 Flavors)', prices: '₹449' },
+                { name: 'Volcano Farm Fresh', prices: '₹439' },
+                { name: 'Volcano Mexican', prices: '₹449' },
+                { name: 'Volcano Cheese N Corn', prices: '₹459' },
+                { name: 'Volcano Hot Tandoori', prices: '₹469' },
+                { name: 'Volcano Peppy Paneer', prices: '₹479' }
+            ],
+            'Burgers': [
+                { name: 'Aloo Tikki Burger', prices: '₹39' },
+                { name: 'Cheese Burger', prices: '₹59' },
+                { name: 'Mexican Burger', prices: '₹59' },
+                { name: 'Paneer Burger', prices: '₹69' },
+                { name: 'Hot Tandoori Burger', prices: '₹79' },
+                { name: 'Bilandi\'s Special Burger ⭐', prices: '₹109' }
+            ],
+            'Sandwiches': [
+                { name: 'Cold Sandwich', prices: '₹59' },
+                { name: 'Veg Grilled Sandwich', prices: '₹69' },
+                { name: 'Cheese Grilled Sandwich', prices: '₹89' },
+                { name: 'Paneer Sandwich', prices: '₹89' },
+                { name: 'Corn N Cheese Sandwich', prices: '₹99' },
+                { name: 'Peri Peri Sandwich', prices: '₹119' },
+                { name: 'Tandoori Sandwich', prices: '₹119' },
+                { name: 'Makhni Sandwich', prices: '₹119' },
+                { name: 'Veg Club Sandwich', prices: '₹149' },
+                { name: 'Cheese Club Sandwich', prices: '₹169' }
+            ],
+            'Wraps': [
+                { name: 'Aloo Tikki Wrap', prices: '₹69' },
+                { name: 'Paneer Wrap', prices: '₹99' },
+                { name: 'Cheese N Corn Wrap', prices: '₹119' }
+            ],
+            'Patties': [
+                { name: 'Cheese N Corn Patty', prices: '₹39' },
+                { name: 'Tandoori Patty', prices: '₹39' },
+                { name: 'Mexican Patty', prices: '₹49' },
+                { name: 'Pizza Patty', prices: '₹59' }
+            ],
+            'Fries': [
+                { name: 'Plain Fries', prices: '₹79' },
+                { name: 'Cheese Loaded Fries', prices: '₹79' },
+                { name: 'Masala Fries', prices: '₹89' },
+                { name: 'Tandoori Fries', prices: '₹99' },
+                { name: 'Peri Peri Fries', prices: '₹99' }
+            ],
+            'Pasta': [
+                { name: 'Red Sauce Pasta', prices: '₹139' },
+                { name: 'White Sauce Pasta', prices: '₹149' },
+                { name: 'Makhni Pasta', prices: '₹149' },
+                { name: 'Tandoori Pasta', prices: '₹149' },
+                { name: 'Peri Peri Pasta', prices: '₹149' },
+                { name: 'Mix Sauce Pasta', prices: '₹159' }
+            ],
+            'Garlic Bread': [
+                { name: 'Toast Garlic Bread', prices: '₹79' },
+                { name: 'Stuffed Garlic Bread', prices: '₹139' },
+                { name: 'Makhni Cheese Garlic Bread', prices: '₹139' }
+            ],
+            'Chaat': [
+                { name: 'Coming Soon', prices: '₹XX' },
+                { name: 'Coming Soon', prices: '₹XX' },
+               ],
+               'Noodles': [
+                { name: 'Veg Noodles', prices: '₹60' prices: '₹100' },
+                { name: 'Hakka Noodles ', prices: '₹70'prices: '₹130'  },
+                { name: 'Korean Noodles', prices: '₹70'prices: '₹130'  },
+                { name: 'Chilli Garlic Noodles', prices: '₹70'prices: '₹130'  },
+                { name: 'Paneer Noodles', prices: '₹80'prices: '₹140'  },
+               ],
+            'Maggi': [
+                { name: 'Veg Maggie', prices: '₹69' },
+                { name: 'Tandoori Maggie', prices: '₹89' },
+                { name: 'Peri Peri Maggie', prices: '₹89' },
+                { name: 'Makhni Maggie', prices: '₹89' },
+                { name: 'Cheese Maggie', prices: '₹109' },
+                { name: 'Cheese N Corn Maggie', prices: '₹109' }
+            ],
+            'Subs (Garlic/Multigrain)': [
+                { name: 'Aloo Patty Sub', prices: '₹89' },
+                { name: 'Veggie Delight Sub', prices: '₹89' },
+                { name: 'Paneer Tikka Sub', prices: '₹109' },
+                { name: 'Cheese N Corn Sub', prices: '₹129' }
+            ],
+            'Chinese': [
+                { name: 'Spring Roll', prices: '₹69' },
+                { name: 'Cheese Cigar Roll', prices: '₹89' },
+                { name: 'Cheese Balls', prices: '₹129' },
+                { name: 'Honey Chilli Potato', prices: '₹139' },
+                { name: 'Paneer Chilli', prices: '₹179' }
+            ],
+            'Salads': [
+                { name: 'Paneer Salad', prices: '₹119' },
+                { name: 'Corn Paneer Salad', prices: '₹129' },
+                { name: 'Bilandi\'s Special Salad ⭐', prices: '₹149' }
+            ],
+            'Coffee': [
+                { name: 'Hot Coffee', prices: '₹49' },
+                { name: 'Hazelnut Hot Coffee', prices: '₹89' },
+                { name: 'Cold Coffee', prices: '₹69' },
+                { name: 'Cold Coffee with Ice Cream', prices: '₹89' }
+            ],
+            'Shakes': [
+                { name: 'Vanilla Shake', prices: '₹59' },
+                { name: 'Vanilla Shake with Ice Cream', prices: '₹79' },
+                { name: 'Strawberry Shake', prices: '₹69' },
+                { name: 'Strawberry Shake with Ice Cream', prices: '₹89' },
+                { name: 'Mango Shake', prices: '₹69' },
+                { name: 'Mango Shake with Ice Cream', prices: '₹89' },
+                { name: 'Butterscotch Shake', prices: '₹69' },
+                { name: 'Butterscotch Shake with Ice Cream', prices: '₹89' },
+                { name: 'Chocolate Shake', prices: '₹79' },
+                { name: 'Chocolate Shake with Ice Cream', prices: '₹99' },
+                { name: 'Oreo Shake With Ice Cream', prices: '₹119' },
+                { name: 'Blue Berry Shake With Ice Cream', prices: '₹119' },
+                { name: 'KitKat Shake With Ice Cream', prices: '₹129' },
+                { name: 'Red Velvet Shake With Ice Cream', prices: '₹139' },
+                { name: 'Brownie Shake With Ice Cream', prices: '₹149' },
+                { name: 'Nutella Shake With Ice Cream', prices: '₹149' },
+                { name: 'Biscoff Shake With Ice Cream ⭐', prices: '₹159' }
+            ],
+            'Tea': [
+                { name: 'Masala Tea', prices: '₹19' },
+                { name: 'Elaichi Tea', prices: '₹25' },
+                { name: 'Rose Tea', prices: '₹29' }
+            ],
+            'Mocktails & Drinks': [
                 { name: 'Jeera Mojito', prices: '₹79' },
                 { name: 'Mint Mojito', prices: '₹79' },
                 { name: 'Water Melon', prices: '₹89' },

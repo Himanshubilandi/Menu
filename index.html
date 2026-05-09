@@ -384,29 +384,29 @@
             color: var(--muted-foreground);
 
         }
-.celebration-image {
-  height: 180px;
-  border-radius: 15px 15px 0 0;
-  background-size: cover;
-  background-position: center;
-}
+        .celebration-image {
+          height: 180px;
+          border-radius: 15px 15px 0 0;
+          background-size: cover;
+          background-position: center;
+        }
 
-/* Different images for each card */
-.birthday {
-  background-image: url("birthday.jpeg");
-}
+        /* Different images for each card */
+        .birthday {
+          background-image: url("birthday.jpeg");
+        }
 
-.engagement {
-  background-image: url("hall.jpeg");
-}
+        .engagement {
+          background-image: url("hall.jpeg");
+        }
 
-.corporate {
-  background-image: url("anniversary.jpeg");
-}
+        .corporate {
+          background-image: url("anniversary.jpeg");
+        }
 
-.family {
-  background-image: url("family.jpeg");
-}
+        .family {
+          background-image: url("family.jpeg");
+        }
         /* Location Section */
         .location {
             padding: 3rem 1rem;
@@ -646,7 +646,7 @@
             <p class="hero-tagline">Where Every Celebration Begins</p>
 
             <div class="hero-buttons">
-                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="https://www.bilandis.com/menu" class="btn btn-primary">View Menu</a>
                 <a href="#celebration" class="btn btn-outline">Celebration Hall</a>
                 <a href="https://wa.me/919828298009" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Order Cake</a>
             </div>
@@ -727,14 +727,15 @@
                     </div>
                 </div>
                 <div class="celebration-card">
-<div class="celebration-image corporate"></div>
+                    <div class="celebration-image corporate"></div>
                     <div class="celebration-content">
                         <div class="celebration-title">Corporate Events</div>
                         <div class="celebration-desc">Professional gatherings</div>
                     </div>
                 </div>
                 <div class="celebration-card">
-<div class="celebration-image family"></div>                    <div class="celebration-content">
+                    <div class="celebration-image family"></div>                    
+                    <div class="celebration-content">
                         <div class="celebration-title">Family Gatherings</div>
                         <div class="celebration-desc">Quality time together</div>
                     </div>
@@ -783,13 +784,13 @@
                 <div class="review-card">
                     <div class="review-stars">★★★★★</div>
                     <div class="review-text">Absolutely loved this bakery! Everything was fresh, delicious, and made with so much care. The aroma as you walk in is irresistible, and the taste is even better. From soft breads to perfectly sweet pastries, every item feels special.
-The cake i was ordered, absolutely amazing. Fresh, soft, and perfectly balanced in sweetness. Every bite tasted rich and homemade, not artificial or overly sugary. The design was beautiful and the quality was top-notch. Easily one of the best cakes I’ve had. Will definitely order again. Highly recommended!
+The cake i was ordered, absolutely amazing. Fresh, soft, and perfectly balanced in sweetness. Every bite tasted rich and homemade, not artificial or overly sugary. The design was beautiful and the quality was top-notch. Easily one of the best cakes I've had. Will definitely order again. Highly recommended!
 </div>
-<div class="review-author">- Kapil</div>
+                    <div class="review-author">- Kapil</div>
                 </div>
  <div class="review-card">
                     <div class="review-stars">★★★★★</div>
-                    <div class="review-text">This place is more than just a shop for me — it’s a dream built with love, hard work, and endless dedication. Every cake is made with so much care, and you can taste the warmth and sincerity in every bite. The quality, freshness, and service are always outstanding. Watching the world’s best gentleman pour his heart into this shop makes me incredibly proud. This is a place where passion meets perfection. Truly the best in every way, and always close to my heart ❤️🍰
+                    <div class="review-text">This place is more than just a shop for me — it's a dream built with love, hard work, and endless dedication. Every cake is made with so much care, and you can taste the warmth and sincerity in every bite. The quality, freshness, and service are always outstanding. Watching the world's best gentleman pour his heart into this shop makes me incredibly proud. This is a place where passion meets perfection. Truly the best in every way, and always close to my heart ❤️🍰
 
 </div>
                     <div class="review-author">- Gurleen Kaur</div>
@@ -872,6 +873,7 @@ The cake i was ordered, absolutely amazing. Fresh, soft, and perfectly balanced 
                 { name: 'Mexican Burger', prices: '₹59' },
                 { name: 'Paneer Burger', prices: '₹69' },
                 { name: 'Hot Tandoori Burger', prices: '₹79' },
+                { name: 'Makhni Paneer Burger', prices: '₹109' },
                 { name: 'Bilandi\'s Special Burger ⭐', prices: '₹109' }
             ],
             'Sandwiches': [
@@ -886,6 +888,12 @@ The cake i was ordered, absolutely amazing. Fresh, soft, and perfectly balanced 
                 { name: 'Veg Club Sandwich', prices: '₹149' },
                 { name: 'Cheese Club Sandwich', prices: '₹169' }
             ],
+            'Zingy Parcel': [
+                { name: 'Zingy Parcel', prices: '₹60' },
+                { name: 'Tandoori Parcel', prices: '₹60' },
+                { name: 'Makhni Parcel', prices: '₹60' },
+                { name: 'Peri Peri Parcel', prices: '₹60' }
+            ],
             'Wraps': [
                 { name: 'Aloo Tikki Wrap', prices: '₹69' },
                 { name: 'Paneer Wrap', prices: '₹99' },
@@ -897,12 +905,13 @@ The cake i was ordered, absolutely amazing. Fresh, soft, and perfectly balanced 
                 { name: 'Mexican Patty', prices: '₹49' },
                 { name: 'Pizza Patty', prices: '₹59' }
             ],
-            'Fries': [
+            'Snacks': [
                 { name: 'Plain Fries', prices: '₹79' },
                 { name: 'Cheese Loaded Fries', prices: '₹79' },
                 { name: 'Masala Fries', prices: '₹89' },
                 { name: 'Tandoori Fries', prices: '₹99' },
-                { name: 'Peri Peri Fries', prices: '₹99' }
+                { name: 'Peri Peri Fries', prices: '₹99' },
+                { name: 'Dahi Ke Sholay 🌟 Must Try', prices: '₹140' }
             ],
             'Pasta': [
                 { name: 'Red Sauce Pasta', prices: '₹139' },
@@ -917,16 +926,6 @@ The cake i was ordered, absolutely amazing. Fresh, soft, and perfectly balanced 
                 { name: 'Stuffed Garlic Bread', prices: '₹139' },
                 { name: 'Makhni Cheese Garlic Bread', prices: '₹139' }
             ],
-            'Chaat': [
-                { name: 'Coming Soon', prices: '₹XX' },
-                { name: 'Coming Soon', prices: '₹XX' },
-               ],
-               'Noodles': [
-                { name: 'Coming Soon', prices: '₹XXX' },
-                { name: 'Coming Soon', prices: '₹XXX' },
-                { name: 'Coming Soon', prices: '₹XXX' },
-                { name: 'Coming Soon', prices: '₹XXX' },
-               ],
             'Maggi': [
                 { name: 'Veg Maggie', prices: '₹69' },
                 { name: 'Tandoori Maggie', prices: '₹89' },
@@ -942,11 +941,18 @@ The cake i was ordered, absolutely amazing. Fresh, soft, and perfectly balanced 
                 { name: 'Cheese N Corn Sub', prices: '₹129' }
             ],
             'Chinese': [
-                { name: 'Spring Roll', prices: '₹69' },
-                { name: 'Cheese Cigar Roll', prices: '₹89' },
-                { name: 'Cheese Balls', prices: '₹129' },
+                { name: 'Chilli Potato', prices: '₹130' },
                 { name: 'Honey Chilli Potato', prices: '₹139' },
+                { name: 'Spring Roll', prices: '₹69' },
+                { name: 'Cheese Balls', prices: '₹129' },
                 { name: 'Paneer Chilli', prices: '₹179' }
+            ],
+            'Noodles': [
+                { name: 'Veg Noodles', prices: '₹60 (Half) | ₹100 (Full)' },
+                { name: 'Hakka Noodles', prices: '₹70 (Half) | ₹130 (Full)' },
+                { name: 'Korean Noodles', prices: '₹70 (Half) | ₹130 (Full)' },
+                { name: 'Chilli Garlic Noodles', prices: '₹70 (Half) | ₹130 (Full)' },
+                { name: 'Paneer Noodles', prices: '₹80 (Half) | ₹140 (Full)' }
             ],
             'Salads': [
                 { name: 'Paneer Salad', prices: '₹119' },
@@ -956,6 +962,7 @@ The cake i was ordered, absolutely amazing. Fresh, soft, and perfectly balanced 
             'Coffee': [
                 { name: 'Hot Coffee', prices: '₹49' },
                 { name: 'Hazelnut Hot Coffee', prices: '₹89' },
+                { name: 'Black Tea', prices: '₹30' },
                 { name: 'Cold Coffee', prices: '₹69' },
                 { name: 'Cold Coffee with Ice Cream', prices: '₹89' }
             ],
@@ -983,7 +990,7 @@ The cake i was ordered, absolutely amazing. Fresh, soft, and perfectly balanced 
                 { name: 'Elaichi Tea', prices: '₹25' },
                 { name: 'Rose Tea', prices: '₹29' }
             ],
-            'Mocktails & Drinks': [
+            'Mocktails': [
                 { name: 'Jeera Mojito', prices: '₹79' },
                 { name: 'Mint Mojito', prices: '₹79' },
                 { name: 'Water Melon', prices: '₹89' },

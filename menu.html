@@ -348,6 +348,14 @@ catsEl.addEventListener('click',e=>{
 
 function x(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/'/g,'&#x27;')}
 
+// Function to round prices ending in 9 to the next 10
+function roundPrice(price){
+  if(price%10===9){
+    return price+1;
+  }
+  return price;
+}
+
 function render(filter,search){
   mainEl.innerHTML='';
   const sq=(search||'').toLowerCase().trim();
@@ -383,11 +391,11 @@ function render(filter,search){
       // Price HTML
       let priceH='';
       if(it.prices){
-        priceH=`<div class="price-sizes">${it.prices.map((p,i)=>`<div class="chip"><span class="chip-lbl">${SZ[i]}</span><span class="chip-val">₹${p}</span></div>`).join('')}</div>`;
+        priceH=`<div class="price-sizes">${it.prices.map((p,i)=>`<div class="chip"><span class="chip-lbl">${SZ[i]}</span><span class="chip-val">₹${roundPrice(p)}</span></div>`).join('')}</div>`;
       } else if(it.halfFull){
-        priceH=`<div class="price-sizes"><div class="chip"><span class="chip-lbl">Half</span><span class="chip-val">₹${it.halfFull[0]}</span></div><div class="chip"><span class="chip-lbl">Full</span><span class="chip-val">₹${it.halfFull[1]}</span></div></div>`;
+        priceH=`<div class="price-sizes"><div class="chip"><span class="chip-lbl">Half</span><span class="chip-val">₹${roundPrice(it.halfFull[0])}</span></div><div class="chip"><span class="chip-lbl">Full</span><span class="chip-val">₹${roundPrice(it.halfFull[1])}</span></div></div>`;
       } else {
-        priceH=`<div class="price-single">₹${it.price}</div>`;
+        priceH=`<div class="price-single">₹${roundPrice(it.price)}</div>`;
       }
 
       let badgeH='';

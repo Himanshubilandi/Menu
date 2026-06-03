@@ -165,6 +165,7 @@ const MENU=[
     {name:'Mexican Pizza',prices:[169,259,369]},
     {name:'Deluxe Veggie Pizza',prices:[179,269,379]},
     {name:'Veg Extravaganza Pizza',prices:[189,279,389]},
+    {name: 'Creamy Tomato Pizza', prices: [₹199, ₹299, ₹409] },
     {name:'Cheese N Corn Pizza',prices:[199,299,409]},
     {name:'Indi Makhni Paneer Pizza',prices:[209,309,409]},
     {name:'Kadai Paneer Pizza',prices:[209,309,409]},
@@ -275,7 +276,7 @@ const MENU=[
   {cat:'Coffee',icon:'☕',items:[
     {name:'Hot Coffee',price:49},
     {name:'Hazelnut Hot Coffee',price:89},
-    {name:'Black Tea',price:30},
+    {name:'Black Coffee',price:30},
     {name:'Cold Coffee',price:69},
     {name:'Cold Coffee with Ice Cream',price:89},
   ]},
@@ -297,11 +298,6 @@ const MENU=[
     {name:'Brownie Shake With Ice Cream',price:149},
     {name:'Nutella Shake With Ice Cream',price:149},
     {name:'Biscoff Shake With Ice Cream',price:159,special:true},
-  ]},
-  {cat:'Tea',icon:'🍵',items:[
-    {name:'Masala Tea',price:19},
-    {name:'Elaichi Tea',price:25},
-    {name:'Rose Tea',price:29},
   ]},
   {cat:'Mocktails',icon:'🍹',items:[
     {name:'Jeera Mojito',price:79},
@@ -348,14 +344,6 @@ catsEl.addEventListener('click',e=>{
 
 function x(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/'/g,'&#x27;')}
 
-// Function to round prices ending in 9 to the next 10
-function roundPrice(price){
-  if(price%10===9){
-    return price+1;
-  }
-  return price;
-}
-
 function render(filter,search){
   mainEl.innerHTML='';
   const sq=(search||'').toLowerCase().trim();
@@ -391,11 +379,11 @@ function render(filter,search){
       // Price HTML
       let priceH='';
       if(it.prices){
-        priceH=`<div class="price-sizes">${it.prices.map((p,i)=>`<div class="chip"><span class="chip-lbl">${SZ[i]}</span><span class="chip-val">₹${roundPrice(p)}</span></div>`).join('')}</div>`;
+        priceH=`<div class="price-sizes">${it.prices.map((p,i)=>`<div class="chip"><span class="chip-lbl">${SZ[i]}</span><span class="chip-val">₹${p}</span></div>`).join('')}</div>`;
       } else if(it.halfFull){
-        priceH=`<div class="price-sizes"><div class="chip"><span class="chip-lbl">Half</span><span class="chip-val">₹${roundPrice(it.halfFull[0])}</span></div><div class="chip"><span class="chip-lbl">Full</span><span class="chip-val">₹${roundPrice(it.halfFull[1])}</span></div></div>`;
+        priceH=`<div class="price-sizes"><div class="chip"><span class="chip-lbl">Half</span><span class="chip-val">₹${it.halfFull[0]}</span></div><div class="chip"><span class="chip-lbl">Full</span><span class="chip-val">₹${it.halfFull[1]}</span></div></div>`;
       } else {
-        priceH=`<div class="price-single">₹${roundPrice(it.price)}</div>`;
+        priceH=`<div class="price-single">₹${it.price}</div>`;
       }
 
       let badgeH='';

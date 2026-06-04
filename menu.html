@@ -174,7 +174,7 @@ const MENU=[
     {name:"Bilandi's Special Pizza",prices:[229,349,469],special:true},
   ]},
   {cat:'Special Pizzas',icon:'🌋',items:[
-    {name:'4 In 1 Pizza (Any 4 Flavors)',price:449},
+    {name:'4 In 1 Pizza (Any 4 Flavors)',price:509},
     {name:'Volcano Farm Fresh',price:439},
     {name:'Volcano Mexican',price:449},
     {name:'Volcano Cheese N Corn',price:459},
@@ -217,11 +217,10 @@ const MENU=[
     {name:'Cheese N Corn Patty',price:39},
     {name:'Tandoori Patty',price:39},
     {name:'Mexican Patty',price:49},
-    {name:'Pizza Patty',price:59},
   ]},
   {cat:'Snacks',icon:'🍟',items:[
     {name:'Plain Fries',price:79},
-    {name:'Cheese Loaded Fries',price:79},
+    {name:'Cheese Loaded Fries',price:99},
     {name:'Masala Fries',price:89},
     {name:'Tandoori Fries',price:99},
     {name:'Peri Peri Fries',price:99},
@@ -231,12 +230,11 @@ const MENU=[
     {name:'Red Sauce Pasta',price:139},
     {name:'White Sauce Pasta',price:149},
     {name:'Makhni Pasta',price:149},
-    {name:'Tandoori Pasta',price:149},
     {name:'Peri Peri Pasta',price:149},
     {name:'Mix Sauce Pasta',price:159},
   ]},
   {cat:'Garlic Bread',icon:'🧄',items:[
-    {name:'Toast Garlic Bread',price:79},
+    {name:'Toast Garlic Bread',price:99},
     {name:'Stuffed Garlic Bread',price:139},
     {name:'Makhni Cheese Garlic Bread',price:139},
   ]},
@@ -249,10 +247,10 @@ const MENU=[
     {name:'Cheese N Corn Maggie',price:109},
   ]},
   {cat:'Subs',icon:'🥖',items:[
-    {name:'Aloo Patty Sub (Garlic/Multigrain)',price:89},
-    {name:'Veggie Delight Sub (Garlic/Multigrain)',price:89},
-    {name:'Paneer Tikka Sub (Garlic/Multigrain)',price:109},
-    {name:'Cheese N Corn Sub (Garlic/Multigrain)',price:129},
+    {name:'Aloo Patty Sub (Garlic/Multigrain)',price:99},
+    {name:'Veggie Delight Sub (Garlic/Multigrain)',price:99},
+    {name:'Paneer Tikka Sub (Garlic/Multigrain)',price:119},
+    {name:'Cheese N Corn Sub (Garlic/Multigrain)',price:139},
   ]},
   {cat:'Chinese',icon:'🥢',items:[
     {name:'Chilli Potato',price:130},
@@ -276,9 +274,11 @@ const MENU=[
   {cat:'Coffee',icon:'☕',items:[
     {name:'Hot Coffee',price:49},
     {name:'Hazelnut Hot Coffee',price:89},
-    {name:'Black Coffee',price:30},
+    {name:'Black Tea',price:30},
     {name:'Cold Coffee',price:69},
     {name:'Cold Coffee with Ice Cream',price:89},
+    {name:'Caramel Cold Coffee',price:69},
+    {name:'Caramel Cold Coffee with Ice Cream',price:89},
   ]},
   {cat:'Shakes',icon:'🥤',items:[
     {name:'Vanilla Shake',price:59},
@@ -291,6 +291,8 @@ const MENU=[
     {name:'Butterscotch Shake with Ice Cream',price:89},
     {name:'Chocolate Shake',price:79},
     {name:'Chocolate Shake with Ice Cream',price:99},
+     {name:'Caramel Shake',price:79},
+    {name:'Caramel Shake with Ice Cream',price:99},
     {name:'Oreo Shake With Ice Cream',price:119},
     {name:'Blue Berry Shake With Ice Cream',price:119},
     {name:'KitKat Shake With Ice Cream',price:129},
@@ -299,6 +301,7 @@ const MENU=[
     {name:'Nutella Shake With Ice Cream',price:149},
     {name:'Biscoff Shake With Ice Cream',price:159,special:true},
   ]},
+ 
   {cat:'Mocktails',icon:'🍹',items:[
     {name:'Jeera Mojito',price:79},
     {name:'Mint Mojito',price:79},
@@ -309,11 +312,31 @@ const MENU=[
   {cat:'Desserts',icon:'🍫',items:[
     {name:'Brownie',price:119},
     {name:'Brownie with Ice Cream',price:159},
-    {name:'Chocolate Sandwich',price:179},
   ]},
   {cat:'Chaat',icon:'🍛',comingSoon:true,items:[]},
 ];
 
+MENU.forEach(section => {
+  section.items.forEach(item => {
+
+    if (item.price && item.price % 10 === 9) {
+      item.price += 1;
+    }
+
+    if (item.prices) {
+      item.prices = item.prices.map(p =>
+        p % 10 === 9 ? p + 1 : p
+      );
+    }
+
+    if (item.halfFull) {
+      item.halfFull = item.halfFull.map(p =>
+        p % 10 === 9 ? p + 1 : p
+      );
+    }
+
+  });
+});
 const catsEl=document.getElementById('cats'),mainEl=document.getElementById('main');
 
 // Build circles

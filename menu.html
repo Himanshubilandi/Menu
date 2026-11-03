@@ -203,6 +203,12 @@ footer a{color:var(--gold2);text-decoration:none}
 .field input:focus,.field textarea:focus{border-color:var(--cr)}
 .field textarea{resize:vertical;min-height:56px}
 
+/* location (optional) */
+.loc-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:6px;background:var(--white);color:var(--cr);border:1.5px solid var(--cr);border-radius:10px;padding:10px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:800;cursor:pointer;margin-bottom:8px}
+.loc-btn:disabled{opacity:.5}
+.loc-status{font-size:12px;font-weight:700;color:var(--muted);margin-bottom:6px}
+.loc-status:empty{display:none}
+
 .notice{display:flex;gap:9px;background:rgba(196,154,42,.1);border:1.5px solid rgba(196,154,42,.4);border-radius:12px;padding:11px 12px;margin-bottom:4px}
 .notice .nic{font-size:1.1rem;flex-shrink:0;line-height:1}
 .notice .ntx{font-size:12px;font-weight:700;color:#7A5A10;line-height:1.4}
@@ -436,7 +442,7 @@ const MENU=[
     {name:'Butterscotch Shake with Ice Cream',price:89},
     {name:'Chocolate Shake',price:79},
     {name:'Chocolate Shake with Ice Cream',price:99},
-     {name:'Caramel Shake',price:79},
+    {name:'Caramel Shake',price:79},
     {name:'Caramel Shake with Ice Cream',price:99},
     {name:'Oreo Shake With Ice Cream',price:119},
     {name:'Blue Berry Shake With Ice Cream',price:119},
@@ -446,7 +452,7 @@ const MENU=[
     {name:'Nutella Shake With Ice Cream',price:149},
     {name:'Biscoff Shake With Ice Cream',price:159,special:true},
   ]},
- 
+
   {cat:'Mocktails',icon:'🍹',items:[
     {name:'Jeera Mojito',price:79},
     {name:'Mint Mojito',price:79},
@@ -484,9 +490,9 @@ MENU.forEach(section => {
 });
 
 /* ============ CART CONFIG ============ */
-// Replace with the restaurant's WhatsApp number in international format, no + or spaces, e.g. "919812345678"
+// Restaurant's WhatsApp number in international format, no + or spaces
 const WHATSAPP_NUMBER = "919828298009";
-// Number shown to the customer to call for confirmation (can be same as above or different)
+// Number shown to the customer to call for confirmation
 const CALL_NUMBER = "+91 98282 98009";
 
 /* cart = { vid: {name, variant, price, qty} } */
@@ -880,19 +886,42 @@ function renderCheckoutStep2(){
     <div class="step-tabs"><div class="step-dot active"></div><div class="step-dot active"></div></div>
     <div class="field"><label>Your Name</label><input type="text" id="custName" placeholder="e.g. Himanshu Bilandi"></div>
     <div class="field"><label>Phone Number</label><input type="tel" id="custPhone" placeholder="10-digit mobile number"></div>
-    ${orderType==='Delivery' ? `<div class="field"><label>Delivery Address</label><textarea id="custAddr" placeholder="House no., street, landmark, area"></textarea></div>` : ''}
+    ${orderType==='Delivery' ? `<div class="field"><label>Delivery Address</label><textarea id="custAddr" placeholder="House no., street, landmark, area"></textarea></div>
+    <div class="field"><label>Location (optional)</label>
+      <button type="button" class="loc-btn" id="getLoc">📍 Use my current location</button>
+      <div class="loc-status" id="locStatus"></div>
+      <input type="url" id="custLoc" placeholder="Please Paste your location link here">
+    </div>` : ''}
     <div class="field"><label>Any Instructions (optional)</label><textarea id="custNote" placeholder="e.g. less spicy, extra napkins"></textarea></div>
     <div class="notice"><span class="nic">⚠️</span><span class="ntx">Sending this order on WhatsApp is only a request — it does <b>not</b> place your order automatically. Please wait for our confirmation before it's final.</span></div>
   `;
   checkoutFoot.innerHTML = `<button class="btn-primary wa" id="sendWa">📲 Send Order on WhatsApp</button>`;
   document.getElementById('backStep1').addEventListener('click', renderCheckoutStep1);
   document.getElementById('sendWa').addEventListener('click', sendToWhatsApp);
+
+  // Optional: "Use my current location" button
+  const gl=document.getElementById('getLoc');
+  if(gl) gl.addEventListener('click',()=>{
+    const st=document.getElementById('locStatus');
+    if(!navigator.geolocation){ st.textContent='Aapka browser location support nahi karta. Link paste karein.'; return; }
+    st.textContent='Location le rahe hain…'; gl.disabled=true;
+    navigator.geolocation.getCurrentPosition(p=>{
+      const la=p.coords.latitude, lo=p.coords.longitude;
+      document.getElementById('custLoc').value=`https://www.google.com/maps?q=${la},${lo}`;
+      st.textContent='✅ Location added';
+      gl.disabled=false;
+    },()=>{
+      st.textContent='⚠️ Location Not found , Please add link manually.';
+      gl.disabled=false;
+    },{enableHighAccuracy:true,timeout:15000});
+  });
 }
 
 function sendToWhatsApp(){
   const name=(document.getElementById('custName').value||'').trim();
   const phone=(document.getElementById('custPhone').value||'').trim();
   const addr = orderType==='Delivery' ? (document.getElementById('custAddr').value||'').trim() : '';
+  const loc = orderType==='Delivery' ? (document.getElementById('custLoc').value||'').trim() : '';
   const note=(document.getElementById('custNote').value||'').trim();
 
   if(!name || !phone){
@@ -915,6 +944,7 @@ function sendToWhatsApp(){
   msg += `*Name:* ${name}\n`;
   msg += `*Phone:* ${phone}\n`;
   if(addr) msg += `*Address:* ${addr}\n`;
+  if(loc) msg += `*Location:* ${loc}\n`;
   msg += `\n*Items:*\n`;
   entries.forEach(([id,c])=>{
     const label = c.variant ? ` (${c.variant})` : '';
@@ -924,7 +954,7 @@ function sendToWhatsApp(){
   if(note) msg += `\n*Instructions:* ${note}\n`;
   msg += `\n⚠️ _Please note: sending this message does not place your order. Your order is only confirmed once you call._`;
 
-  const url = `https://wa.me/${9828298009}?text=${encodeURIComponent(msg)}`;
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
   window.open(url, '_blank');
   alert('✅ Order sent!\n\n📞 Please call us right after sending your order to confirm it — otherwise your order will NOT be placed.\n\nCall: ' + CALL_NUMBER);
 }
